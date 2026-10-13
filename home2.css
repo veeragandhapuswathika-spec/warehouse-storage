@@ -1,0 +1,2396 @@
+/* =========================================================
+   STOREVAULT HOME 2
+   Brand: Bright Teal + Orange
+   Light Mode + Dark Mode + RTL + Responsive
+   Consistent button colors in both themes
+========================================================= */
+
+/* ==================== 1. VARIABLES ==================== */
+
+.home2-page {
+    --h2-teal: #00B8B0;
+    --h2-teal-dark: #008F89;
+    --h2-teal-light: #E0F8F6;
+
+    --h2-orange: #FF8C00;
+    --h2-orange-dark: #E67E00;
+    --h2-orange-light: #FFF0E0;
+
+    --h2-bg: #F7F9F8;
+    --h2-surface: #FFFFFF;
+    --h2-text: #202D30;
+    --h2-muted: #657477;
+    --h2-border: #DCE7E5;
+
+    overflow: hidden;
+    background: var(--h2-bg);
+    color: var(--h2-text);
+    font-family: inherit;
+}
+
+.home2-page *,
+.home2-page *::before,
+.home2-page *::after {
+    box-sizing: border-box;
+}
+
+.home2-page img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.home2-page h1,
+.home2-page h2,
+.home2-page h3,
+.home2-page p {
+    margin-top: 0;
+}
+
+.home2-page h1,
+.home2-page h2,
+.home2-page h3 {
+    color: var(--h2-text);
+    line-height: 1.2;
+}
+
+.home2-page p {
+    color: var(--h2-muted);
+    line-height: 1.8;
+}
+
+.home2-page a {
+    text-decoration: none;
+}
+
+.home2-page section {
+    position: relative;
+}
+
+.home2-page .site-container {
+    width: min(1200px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+.home2-page span {
+    overflow-wrap: break-word;
+}
+
+/* ==================== 2. TAGLINES ==================== */
+
+.home2-page .h2-eyebrow,
+.home2-page .hero-eyebrow,
+.home2-page .section-tagline,
+.home2-page .section-label,
+.home2-page .eyebrow,
+.home2-page .section-subtitle,
+.home2-page .subtitle-label,
+.home2-page .overline,
+.home2-page .cta-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding: 0;
+    color: var(--h2-orange) !important;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+.home2-page .h2-eyebrow::before,
+.home2-page .hero-eyebrow::before,
+.home2-page .section-tagline::before,
+.home2-page .section-label::before,
+.home2-page .eyebrow::before,
+.home2-page .section-subtitle::before,
+.home2-page .subtitle-label::before,
+.home2-page .overline::before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 30px;
+    width: 30px;
+    height: 2px;
+    background: var(--h2-orange);
+}
+
+.home2-page h1 span,
+.home2-page h2 span {
+    color: var(--h2-teal-dark);
+}
+
+body.dark-mode .home2-page h1 span,
+body.dark-mode .home2-page h2 span {
+    color: var(--h2-teal);
+}
+
+/* ==================== 3. BUTTONS ==================== */
+
+.home2-page .h2-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 50px;
+    padding: 14px 24px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 750;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.home2-page .h2-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Orange filled button: same in both themes */
+
+.home2-page .h2-btn-orange,
+body.dark-mode .home2-page .h2-btn-orange {
+    background-color: #FF8C00;
+    color: #202D30;
+    border-color: #FF8C00;
+    box-shadow: 0 8px 22px rgba(255, 140, 0, 0.15);
+}
+
+.home2-page .h2-btn-orange:hover,
+body.dark-mode .home2-page .h2-btn-orange:hover {
+    background-color: #E67E00;
+    color: #202D30;
+    border-color: #E67E00;
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.25);
+}
+
+/* Teal filled button: same in both themes */
+
+.home2-page .h2-btn-teal,
+body.dark-mode .home2-page .h2-btn-teal {
+    background-color: #00B8B0;
+    color: #FFFFFF;
+    border-color: #00B8B0;
+}
+
+.home2-page .h2-btn-teal:hover,
+body.dark-mode .home2-page .h2-btn-teal:hover {
+    background-color: #008F89;
+    color: #FFFFFF;
+    border-color: #008F89;
+    box-shadow: 0 8px 20px rgba(0, 184, 176, 0.2);
+}
+
+/* Transparent teal outline button */
+
+.home2-page .h2-btn-light,
+body.dark-mode .home2-page .h2-btn-light {
+    background-color: transparent;
+    color: #008F89;
+    border: 1px solid #008F89;
+    box-shadow: none;
+}
+
+.home2-page .h2-btn-light:hover,
+body.dark-mode .home2-page .h2-btn-light:hover {
+    background-color: #00B8B0;
+    color: #FFFFFF;
+    border-color: #00B8B0;
+}
+
+/* ==================== 4. HERO ==================== */
+
+.home2-page .h2-hero {
+    padding: 82px 0 90px;
+    background:
+        radial-gradient(
+            circle at 5% 10%,
+            rgba(0, 184, 176, 0.09),
+            transparent 30%
+        ),
+        var(--h2-bg);
+}
+
+.home2-page .h2-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    align-items: center;
+    gap: 64px;
+}
+
+.home2-page .h2-hero-content {
+    position: relative;
+    z-index: 2;
+    animation: h2FadeUp 0.8s ease both;
+}
+
+.home2-page .h2-hero-content h1 {
+    max-width: 620px;
+    margin-bottom: 22px;
+    font-size: clamp(38px, 4.5vw, 62px);
+    font-weight: 850;
+    letter-spacing: -1.8px;
+}
+
+.home2-page .h2-hero-content h1 span {
+    display: block;
+    margin-top: 7px;
+}
+
+.home2-page .h2-hero-content > p {
+    max-width: 530px;
+    margin-bottom: 28px;
+    font-size: 16px;
+}
+
+.home2-page .h2-hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 27px;
+}
+
+.home2-page .h2-hero-buttons .h2-btn {
+    min-height: 54px;
+    padding: 15px 28px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 750;
+}
+
+/* Hero primary button */
+
+.home2-page .h2-hero-buttons .h2-btn-orange,
+body.dark-mode .home2-page .h2-hero-buttons .h2-btn-orange {
+    background-color: #FF8C00;
+    color: #202D30;
+    border: 1px solid #FF8C00;
+}
+
+.home2-page .h2-hero-buttons .h2-btn-orange:hover,
+body.dark-mode .home2-page .h2-hero-buttons .h2-btn-orange:hover {
+    background-color: #E67E00;
+    color: #202D30;
+    border-color: #E67E00;
+}
+
+/* Explore Facilities: teal outline in both themes */
+
+.home2-page .h2-hero-buttons .h2-btn-teal,
+body.dark-mode .home2-page .h2-hero-buttons .h2-btn-teal {
+    background-color: transparent;
+    color: #008F89;
+    border: 2px solid #008F89;
+    box-shadow: none;
+}
+
+.home2-page .h2-hero-buttons .h2-btn-teal:hover,
+body.dark-mode .home2-page .h2-hero-buttons .h2-btn-teal:hover {
+    background-color: rgba(0, 184, 176, 0.1);
+    color: #008F89;
+    border-color: #008F89;
+    transform: translateY(-3px);
+}
+
+/* Support the light-style class if used in your HTML */
+
+.home2-page .h2-hero-buttons .h2-btn-light,
+body.dark-mode .home2-page .h2-hero-buttons .h2-btn-light {
+    background-color: transparent;
+    color: #008F89;
+    border: 1px solid #008F89;
+}
+
+.home2-page .h2-hero-buttons .h2-btn-light:hover,
+body.dark-mode .home2-page .h2-hero-buttons .h2-btn-light:hover {
+    background-color: #00B8B0;
+    color: #FFFFFF;
+    border-color: #00B8B0;
+}
+
+.home2-page .h2-hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+}
+
+.home2-page .h2-hero-points span {
+    color: var(--h2-muted);
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.home2-page .h2-hero-visual {
+    position: relative;
+    min-width: 0;
+    padding: 0 12px 15px 0;
+    animation: h2FadeIn 1s ease both;
+}
+
+.home2-page .h2-hero-visual > img {
+    position: relative;
+    z-index: 1;
+    height: 440px;
+    border-radius: 16px;
+    box-shadow: 0 22px 55px rgba(26, 51, 51, 0.16);
+    transition: transform 0.6s ease;
+}
+
+.home2-page .h2-hero-visual:hover > img {
+    transform: scale(1.025);
+}
+
+.home2-page .h2-hero-shape {
+    position: absolute;
+    right: -12px;
+    bottom: -6px;
+    width: 65%;
+    height: 68%;
+    border-radius: 16px;
+    background: #00B8B0;
+    opacity: 0.2;
+}
+
+.home2-page .h2-hero-card {
+    position: absolute;
+    z-index: 2;
+    right: -8px;
+    bottom: 45px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 270px;
+    padding: 17px 20px;
+    border: 1px solid var(--h2-border);
+    border-radius: 10px;
+    background: var(--h2-surface);
+    box-shadow: 0 12px 35px rgba(20, 45, 45, 0.12);
+    animation: h2Float 4s ease-in-out infinite;
+}
+
+.home2-page .h2-hero-card-icon {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 9px;
+    background: var(--h2-teal-light);
+    color: #008F89;
+    font-size: 25px;
+}
+
+.home2-page .h2-hero-card strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--h2-text);
+    font-size: 14px;
+}
+
+.home2-page .h2-hero-card p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* ==================== 5. SECTION HEADINGS ==================== */
+
+.home2-page .h2-heading {
+    max-width: 700px;
+    margin: 0 auto 46px;
+    text-align: center;
+}
+
+.home2-page .h2-heading h2,
+.home2-page .h2-process-heading h2,
+.home2-page .h2-feature-content h2,
+.home2-page .h2-faq-intro h2 {
+    margin-bottom: 17px;
+    font-size: clamp(29px, 3.2vw, 42px);
+    font-weight: 820;
+    letter-spacing: -0.8px;
+}
+
+.home2-page .h2-heading p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+/* ==================== 6. STORAGE CARDS ==================== */
+
+.home2-page .h2-storage {
+    padding: 95px 0;
+    background: var(--h2-surface);
+}
+
+.home2-page .h2-storage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.home2-page .h2-storage-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--h2-border);
+    border-radius: 12px;
+    background: var(--h2-surface);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.home2-page .h2-storage-card:hover {
+    transform: translateY(-9px);
+    border-color: #00B8B0;
+    box-shadow: 0 18px 40px rgba(23, 65, 62, 0.12);
+}
+
+.home2-page .h2-storage-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.home2-page .h2-storage-image img {
+    height: 235px;
+    transition: transform 0.6s ease;
+}
+
+.home2-page .h2-storage-card:hover .h2-storage-image img {
+    transform: scale(1.07);
+}
+
+.home2-page .h2-number {
+    position: absolute;
+    right: 16px;
+    bottom: 15px;
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 8px;
+    background: #FF8C00;
+    color: #202D30;
+    font-size: 14px;
+    font-weight: 850;
+}
+
+.home2-page .h2-storage-featured {
+    border-top: 4px solid #00B8B0;
+}
+
+.home2-page .h2-storage-body {
+    padding: 25px;
+}
+
+.home2-page .h2-card-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    color: #E67E00 !important;
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: 1.6px;
+}
+
+.home2-page .h2-card-tag::before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 22px;
+    width: 22px;
+    height: 2px;
+    background: #FF8C00;
+}
+
+.home2-page .h2-storage-body h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.home2-page .h2-storage-body p {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.home2-page .h2-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #008F89;
+    font-size: 13px;
+    font-weight: 800;
+    transition: color 0.25s ease, gap 0.25s ease;
+}
+
+.home2-page .h2-link:hover {
+    gap: 13px;
+    color: #E67E00;
+}
+
+/* ==================== 7. FEATURE SECTION ==================== */
+
+.home2-page .h2-feature {
+    padding: 100px 0;
+    background: var(--h2-bg);
+}
+
+.home2-page .h2-feature-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.home2-page .h2-feature-image {
+    position: relative;
+    min-width: 0;
+    padding: 0 0 18px 18px;
+}
+
+.home2-page .h2-feature-image::before {
+    position: absolute;
+    top: -18px;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    border-radius: 13px;
+    background: #00B8B0;
+    content: "";
+    opacity: 0.2;
+}
+
+.home2-page .h2-feature-image > img {
+    position: relative;
+    z-index: 1;
+    height: 470px;
+    border-radius: 13px;
+    transition: transform 0.6s ease;
+}
+
+.home2-page .h2-feature-image:hover > img {
+    transform: scale(1.025);
+}
+
+.home2-page .h2-feature-note {
+    position: absolute;
+    z-index: 2;
+    right: -25px;
+    bottom: 45px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    max-width: 300px;
+    padding: 18px 22px;
+    border-radius: 10px;
+    background: var(--h2-surface);
+    box-shadow: 0 10px 35px rgba(20, 45, 45, 0.12);
+}
+
+.home2-page .h2-feature-note > span {
+    color: #FF8C00;
+    font-size: 30px;
+}
+
+.home2-page .h2-feature-note strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--h2-text);
+    font-size: 14px;
+}
+
+.home2-page .h2-feature-note p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.home2-page .h2-feature-content h2 {
+    max-width: 520px;
+}
+
+.home2-page .h2-feature-content > p {
+    margin-bottom: 28px;
+    font-size: 14px;
+}
+
+.home2-page .h2-feature-list {
+    margin-bottom: 27px;
+}
+
+.home2-page .h2-feature-item {
+    display: flex;
+    gap: 17px;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--h2-border);
+}
+
+.home2-page .h2-feature-item > span {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background: var(--h2-teal-light);
+    color: #008F89;
+    font-size: 13px;
+    font-weight: 850;
+}
+
+.home2-page .h2-feature-item h3 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.home2-page .h2-feature-item p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* ==================== 8. BENEFITS ==================== */
+
+.home2-page .h2-benefits {
+    padding: 95px 0;
+    background: var(--h2-surface);
+}
+
+.home2-page .h2-benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.home2-page .h2-benefit-card {
+    position: relative;
+    min-width: 0;
+    padding: 29px 23px;
+    overflow: hidden;
+    border: 1px solid var(--h2-border);
+    border-radius: 10px;
+    background: var(--h2-surface);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.home2-page .h2-benefit-card:hover {
+    transform: translateY(-7px);
+    background: #E0F8F6;
+}
+
+.home2-page .h2-benefit-icon {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    background: #E0F8F6;
+    color: #008F89;
+    font-size: 27px;
+}
+
+.home2-page .h2-benefit-card:nth-child(even) .h2-benefit-icon {
+    background: #FFF0E0;
+    color: #E67E00;
+}
+
+.home2-page .h2-benefit-number {
+    position: absolute;
+    top: 30px;
+    right: 22px;
+    color: var(--h2-muted);
+    font-size: 12px;
+    font-weight: 800;
+    opacity: 0.7;
+}
+
+.home2-page .h2-benefit-card h3 {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.home2-page .h2-benefit-card p {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+/* ==================== 9. PROCESS ==================== */
+
+.home2-page .h2-process {
+    padding: 95px 0;
+    background: var(--h2-bg);
+}
+
+.home2-page .h2-process-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 35px;
+    margin-bottom: 45px;
+}
+
+.home2-page .h2-process-heading h2 {
+    margin-bottom: 0;
+}
+
+.home2-page .h2-process-heading > p {
+    max-width: 380px;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.home2-page .h2-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.home2-page .h2-process-card {
+    position: relative;
+    min-width: 0;
+    padding: 30px 23px;
+    border: 1px solid var(--h2-border);
+    border-radius: 10px;
+    background: var(--h2-surface);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home2-page .h2-process-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(23, 65, 62, 0.09);
+}
+
+.home2-page .h2-process-number {
+    display: block;
+    margin-bottom: 25px;
+    color: #E67E00;
+    font-size: 13px;
+    font-weight: 850;
+}
+
+.home2-page .h2-process-icon {
+    display: grid;
+    place-items: center;
+    width: 53px;
+    height: 53px;
+    margin-bottom: 23px;
+    border-radius: 11px;
+    background: #E0F8F6;
+    color: #008F89;
+    font-size: 26px;
+}
+
+.home2-page .h2-process-card h3 {
+    margin-bottom: 11px;
+    font-size: 17px;
+}
+
+.home2-page .h2-process-card p {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+.home2-page .h2-process-action {
+    margin-top: 35px;
+    text-align: center;
+}
+
+/* ==================== 10. STORAGE IDEAS ==================== */
+
+.home2-page .h2-ideas {
+    padding: 95px 0;
+    background: var(--h2-surface);
+}
+
+.home2-page .h2-ideas-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: repeat(2, minmax(230px, auto));
+    gap: 20px;
+}
+
+.home2-page .h2-idea-card {
+    position: relative;
+    min-width: 0;
+    min-height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #243B3B;
+}
+
+.home2-page .h2-idea-large {
+    grid-row: span 2;
+}
+
+.home2-page .h2-idea-card > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.65s ease;
+}
+
+.home2-page .h2-idea-card:hover > img {
+    transform: scale(1.06);
+}
+
+.home2-page .h2-idea-card::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(13, 29, 30, 0.02) 0%,
+        rgba(13, 29, 30, 0.42) 40%,
+        rgba(13, 29, 30, 0.92) 100%
+    );
+    content: "";
+}
+
+.home2-page .h2-idea-overlay {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 27px;
+}
+
+.home2-page .h2-idea-overlay > span {
+    display: block;
+    margin-bottom: 10px;
+    color: #FFAD5C;
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: 1.7px;
+}
+
+.home2-page .h2-idea-overlay h3 {
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+.home2-page .h2-idea-overlay p {
+    max-width: 430px;
+    margin-bottom: 14px;
+    color: #E2ECEB;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.home2-page .h2-idea-overlay a {
+    display: inline-block;
+    color: #FFD0A0;
+    font-size: 12px;
+    font-weight: 800;
+    transition: color 0.25s ease;
+}
+
+.home2-page .h2-idea-overlay a:hover {
+    color: #FFFFFF;
+}
+
+/* ==================== 11. FAQ ==================== */
+
+.home2-page .h2-faq {
+    padding: 95px 0;
+    background: var(--h2-bg);
+}
+
+.home2-page .h2-faq-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: start;
+    gap: 75px;
+}
+
+.home2-page .h2-faq-intro h2 {
+    margin-bottom: 18px;
+}
+
+.home2-page .h2-faq-intro > p {
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.home2-page .h2-faq-list {
+    border-top: 1px solid var(--h2-border);
+}
+
+.home2-page .h2-faq-item {
+    border-bottom: 1px solid var(--h2-border);
+}
+
+.home2-page .h2-faq-item summary {
+    position: relative;
+    padding: 22px 42px 22px 0;
+    color: var(--h2-text);
+    font-size: 15px;
+    font-weight: 750;
+    line-height: 1.5;
+    cursor: pointer;
+    list-style: none;
+}
+
+.home2-page .h2-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.home2-page .h2-faq-item summary::after {
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: #E0F8F6;
+    color: #008F89;
+    content: "+";
+    font-size: 20px;
+    transform: translateY(-50%);
+}
+
+.home2-page .h2-faq-item[open] summary::after {
+    background: #FF8C00;
+    color: #202D30;
+    content: "−";
+}
+
+.home2-page .h2-faq-item > p {
+    padding: 0 30px 20px 0;
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+/* ==================== 12. FINAL CTA ==================== */
+
+.home2-page .h2-final-cta {
+    padding: 70px 0;
+    background: var(--h2-surface);
+}
+
+.home2-page .h2-final-cta-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 300px;
+    overflow: hidden;
+    padding: 65px;
+    border-radius: 15px;
+    background: linear-gradient(125deg, #087E7A, #005E5B);
+}
+
+.home2-page .h2-final-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 690px;
+}
+
+.home2-page .h2-final-cta .h2-eyebrow {
+    color: #FFAD5C !important;
+}
+
+.home2-page .h2-final-cta .h2-eyebrow::before {
+    background: #FFAD5C;
+}
+
+.home2-page .h2-final-cta h2 {
+    margin-bottom: 16px;
+    color: #FFFFFF;
+    font-size: clamp(30px, 3.5vw, 44px);
+    font-weight: 850;
+}
+
+.home2-page .h2-final-cta h2 span {
+    color: #FFE0BD;
+}
+
+.home2-page .h2-final-cta-content > p {
+    max-width: 580px;
+    margin-bottom: 25px;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.home2-page .h2-cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.home2-page .h2-cta-decoration {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.home2-page .h2-cta-decoration-one {
+    top: -130px;
+    right: -45px;
+    width: 390px;
+    height: 390px;
+}
+
+.home2-page .h2-cta-decoration-two {
+    right: 80px;
+    bottom: -230px;
+    width: 400px;
+    height: 400px;
+    border-width: 35px;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* View Pricing: white outline */
+
+.home2-page .h2-final-cta a.h2-btn-light,
+.home2-page .h2-final-cta a[href="pricing.html"] {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+.home2-page .h2-final-cta a.h2-btn-light:hover,
+.home2-page .h2-final-cta a[href="pricing.html"]:hover {
+    background-color: #FFFFFF;
+    color: #005E5B;
+    border-color: #FFFFFF;
+}
+
+/* ==================== 13. AVAILABLE STORAGE SIZES ==================== */
+
+.home2-page .h2-sizes {
+    padding: 100px 0;
+    background: var(--h2-bg);
+}
+
+.home2-page .h2-sizes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 45px;
+}
+
+.home2-page .h2-size-card {
+    overflow: hidden;
+    background: var(--h2-surface);
+    border: 1px solid var(--h2-border);
+    border-top: 4px solid #00B8B0;
+    border-radius: 14px;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.home2-page .h2-size-card:hover {
+    transform: translateY(-9px);
+    border-color: #00B8B0;
+    box-shadow: 0 18px 38px rgba(0, 184, 176, 0.18);
+}
+
+.home2-page .h2-size-image {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+
+.home2-page .h2-size-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.home2-page .h2-size-card:hover .h2-size-image img {
+    transform: scale(1.07);
+}
+
+.home2-page .h2-size-label {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 9px 13px;
+    background: #00B8B0;
+    color: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 184, 176, 0.22);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.home2-page .h2-size-body {
+    padding: 25px;
+}
+
+.home2-page .h2-size-body .h2-card-tag {
+    color: #008F89 !important;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.home2-page .h2-size-body h3 {
+    margin: 12px 0;
+    color: var(--h2-text);
+    font-size: 23px;
+    line-height: 1.35;
+}
+
+.home2-page .h2-size-body p {
+    margin: 0 0 22px;
+    color: var(--h2-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Orange outlined links: same in both themes */
+
+.home2-page .h2-size-body .h2-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 9px 14px;
+    background-color: transparent;
+    color: #E67E00;
+    border: 1px solid #FF8C00;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        gap 0.25s ease;
+}
+
+.home2-page .h2-size-body .h2-link:hover {
+    background-color: #FF8C00;
+    color: #202D30;
+    gap: 13px;
+}
+
+.home2-page .h2-sizes-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 35px;
+    padding: 25px 30px;
+    background: #E0F8F6;
+    border: 1px solid rgba(0, 184, 176, 0.35);
+    border-left: 4px solid #00B8B0;
+    border-radius: 14px;
+}
+
+.home2-page .h2-sizes-footer p {
+    margin: 0;
+    color: var(--h2-text);
+    line-height: 1.7;
+}
+
+/* Orange CTA in sizes footer */
+
+.home2-page .h2-sizes-footer .h2-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: 8px;
+    padding: 12px 18px;
+    background-color: #FF8C00;
+    color: #202D30;
+    border: 1px solid #FF8C00;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 800;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.home2-page .h2-sizes-footer .h2-link:hover {
+    background-color: #E67E00;
+    color: #202D30;
+    border-color: #E67E00;
+    transform: translateY(-2px);
+}
+
+/* ==================== 14. ANIMATIONS ==================== */
+
+@keyframes h2FadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes h2FadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes h2Float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* ==================== 15. TABLET ==================== */
+
+@media (max-width: 1000px) {
+    .home2-page .h2-hero {
+        padding: 65px 0;
+    }
+
+    .home2-page .h2-hero-grid {
+        grid-template-columns: 1fr 0.85fr;
+        gap: 35px;
+    }
+
+    .home2-page .h2-hero-content h1 {
+        font-size: clamp(35px, 5vw, 48px);
+    }
+
+    .home2-page .h2-hero-visual > img {
+        height: 360px;
+    }
+
+    .home2-page .h2-storage-grid {
+        gap: 16px;
+    }
+
+    .home2-page .h2-storage-image img {
+        height: 200px;
+    }
+
+    .home2-page .h2-storage-body {
+        padding: 20px;
+    }
+
+    .home2-page .h2-benefit-grid,
+    .home2-page .h2-process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home2-page .h2-feature-grid {
+        gap: 45px;
+    }
+
+    .home2-page .h2-feature-image > img {
+        height: 420px;
+    }
+
+    .home2-page .h2-faq-grid {
+        gap: 40px;
+    }
+
+    .home2-page .h2-final-cta-inner {
+        padding: 48px;
+    }
+
+    .home2-page .h2-sizes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home2-page .h2-size-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ==================== 16. MOBILE ==================== */
+
+@media (max-width: 700px) {
+    .home2-page .site-container {
+        width: calc(100% - 36px);
+    }
+
+    .home2-page .h2-eyebrow,
+    .home2-page .hero-eyebrow,
+    .home2-page .section-tagline,
+    .home2-page .section-label,
+    .home2-page .eyebrow,
+    .home2-page .section-subtitle,
+    .home2-page .subtitle-label,
+    .home2-page .overline,
+    .home2-page .cta-label {
+        margin-bottom: 12px;
+        font-size: 10px;
+        letter-spacing: 1.3px;
+    }
+
+    .home2-page .h2-hero {
+        padding: 45px 0 55px;
+    }
+
+    .home2-page .h2-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .home2-page .h2-hero-content h1 {
+        margin-bottom: 17px;
+        font-size: clamp(35px, 9vw, 46px);
+        letter-spacing: -1px;
+    }
+
+    .home2-page .h2-hero-content > p {
+        margin-bottom: 22px;
+        font-size: 14px;
+    }
+
+    .home2-page .h2-hero-buttons {
+        gap: 10px;
+    }
+
+    .home2-page .h2-hero-buttons .h2-btn {
+        min-height: 46px;
+        padding: 12px 18px;
+        font-size: 12px;
+    }
+
+    .home2-page .h2-hero-points {
+        gap: 9px 14px;
+    }
+
+    .home2-page .h2-hero-points span {
+        font-size: 10px;
+    }
+
+    .home2-page .h2-hero-visual {
+        width: calc(100% - 8px);
+        margin-left: 0;
+        padding-right: 8px;
+    }
+
+    .home2-page .h2-hero-visual > img {
+        height: 290px;
+        border-radius: 12px;
+    }
+
+    .home2-page .h2-hero-card {
+        right: -7px;
+        bottom: 20px;
+        max-width: 225px;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .home2-page .h2-hero-card-icon {
+        width: 37px;
+        height: 37px;
+        font-size: 21px;
+    }
+
+    .home2-page .h2-hero-card strong {
+        font-size: 12px;
+    }
+
+    .home2-page .h2-hero-card p {
+        font-size: 10px;
+    }
+
+    .home2-page .h2-heading {
+        margin-bottom: 30px;
+    }
+
+    .home2-page .h2-heading h2,
+    .home2-page .h2-process-heading h2,
+    .home2-page .h2-feature-content h2,
+    .home2-page .h2-faq-intro h2 {
+        font-size: 29px;
+        letter-spacing: -0.5px;
+    }
+
+    .home2-page .h2-heading p {
+        font-size: 13px;
+    }
+
+    .home2-page .h2-storage,
+    .home2-page .h2-feature,
+    .home2-page .h2-benefits,
+    .home2-page .h2-process,
+    .home2-page .h2-ideas,
+    .home2-page .h2-faq {
+        padding: 60px 0;
+    }
+
+    .home2-page .h2-storage-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .home2-page .h2-storage-image img {
+        height: 230px;
+    }
+
+    .home2-page .h2-storage-body {
+        padding: 22px;
+    }
+
+    .home2-page .h2-storage-body h3 {
+        font-size: 20px;
+    }
+
+    .home2-page .h2-storage-body p {
+        font-size: 13px;
+    }
+
+    .home2-page .h2-feature-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .home2-page .h2-feature-image {
+        padding-left: 10px;
+    }
+
+    .home2-page .h2-feature-image > img {
+        height: 320px;
+    }
+
+    .home2-page .h2-feature-note {
+        right: -4px;
+        bottom: 25px;
+        max-width: 240px;
+        padding: 13px;
+    }
+
+    .home2-page .h2-feature-note > span {
+        font-size: 23px;
+    }
+
+    .home2-page .h2-feature-note strong {
+        font-size: 12px;
+    }
+
+    .home2-page .h2-feature-note p {
+        font-size: 10px;
+    }
+
+    .home2-page .h2-feature-content > p {
+        font-size: 13px;
+    }
+
+    .home2-page .h2-feature-item {
+        gap: 12px;
+    }
+
+    .home2-page .h2-feature-item h3 {
+        font-size: 14px;
+    }
+
+    .home2-page .h2-feature-item p {
+        font-size: 11px;
+    }
+
+    .home2-page .h2-benefit-grid,
+    .home2-page .h2-process-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .home2-page .h2-benefit-card {
+        padding: 23px;
+    }
+
+    .home2-page .h2-benefit-icon {
+        width: 46px;
+        height: 46px;
+        margin-bottom: 17px;
+    }
+
+    .home2-page .h2-benefit-card h3 {
+        font-size: 16px;
+    }
+
+    .home2-page .h2-benefit-card p {
+        font-size: 12px;
+    }
+
+    .home2-page .h2-process-heading {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .home2-page .h2-process-heading > p {
+        margin-top: 16px;
+        font-size: 13px;
+    }
+
+    .home2-page .h2-process-card {
+        padding: 22px;
+    }
+
+    .home2-page .h2-process-number {
+        margin-bottom: 15px;
+    }
+
+    .home2-page .h2-process-icon {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 15px;
+    }
+
+    .home2-page .h2-process-card h3 {
+        font-size: 16px;
+    }
+
+    .home2-page .h2-process-card p {
+        font-size: 12px;
+    }
+
+    .home2-page .h2-ideas-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 16px;
+    }
+
+    .home2-page .h2-idea-card,
+    .home2-page .h2-idea-large {
+        grid-row: auto;
+        min-height: 280px;
+    }
+
+    .home2-page .h2-idea-overlay {
+        padding: 21px;
+    }
+
+    .home2-page .h2-idea-overlay h3 {
+        font-size: 20px;
+    }
+
+    .home2-page .h2-idea-overlay p {
+        font-size: 12px;
+    }
+
+    .home2-page .h2-faq-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .home2-page .h2-faq-intro > p {
+        font-size: 13px;
+    }
+
+    .home2-page .h2-faq-item summary {
+        padding: 18px 38px 18px 0;
+        font-size: 13px;
+    }
+
+    .home2-page .h2-faq-item > p {
+        padding-right: 8px;
+        font-size: 12px;
+    }
+
+    .home2-page .h2-final-cta {
+        padding: 45px 0;
+    }
+
+    .home2-page .h2-final-cta-inner {
+        min-height: 0;
+        padding: 36px 24px;
+        border-radius: 12px;
+    }
+
+    .home2-page .h2-final-cta h2 {
+        font-size: 30px;
+    }
+
+    .home2-page .h2-final-cta-content > p {
+        font-size: 13px;
+    }
+
+    .home2-page .h2-cta-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .home2-page .h2-cta-buttons .h2-btn {
+        width: 100%;
+    }
+
+    .home2-page .h2-cta-decoration-one {
+        right: -200px;
+    }
+
+    .home2-page .h2-cta-decoration-two {
+        right: -120px;
+    }
+
+    .home2-page .h2-sizes {
+        padding: 65px 0;
+    }
+
+    .home2-page .h2-sizes-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-top: 30px;
+    }
+
+    .home2-page .h2-size-card:last-child {
+        grid-column: auto;
+    }
+
+    .home2-page .h2-size-image {
+        height: 220px;
+    }
+
+    .home2-page .h2-sizes-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px;
+    }
+}
+
+/* ==================== 17. SMALL MOBILE ==================== */
+
+@media (max-width: 380px) {
+    .home2-page .site-container {
+        width: calc(100% - 28px);
+    }
+
+    .home2-page .h2-hero-content h1 {
+        font-size: 33px;
+    }
+
+    .home2-page .h2-hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .home2-page .h2-hero-buttons .h2-btn {
+        width: 100%;
+    }
+
+    .home2-page .h2-hero-visual > img {
+        height: 250px;
+    }
+
+    .home2-page .h2-feature-image > img {
+        height: 275px;
+    }
+
+    .home2-page .h2-final-cta-inner {
+        padding: 30px 18px;
+    }
+
+    .home2-page .h2-eyebrow,
+    .home2-page .hero-eyebrow,
+    .home2-page .section-tagline,
+    .home2-page .section-label,
+    .home2-page .eyebrow,
+    .home2-page .section-subtitle,
+    .home2-page .subtitle-label,
+    .home2-page .overline,
+    .home2-page .cta-label {
+        font-size: 10px;
+        letter-spacing: 1.3px;
+    }
+}
+
+/* ==================== 18. DARK MODE ==================== */
+
+body.dark-mode .home2-page {
+    --h2-bg: #121C20;
+    --h2-surface: #1C2B30;
+    --h2-text: #F0F7F6;
+    --h2-muted: #B3C4C5;
+    --h2-border: #35494D;
+
+    --h2-teal: #00B8B0;
+    --h2-teal-dark: #008F89;
+    --h2-teal-light: rgba(0, 184, 176, 0.14);
+
+    --h2-orange: #FF8C00;
+    --h2-orange-dark: #E67E00;
+    --h2-orange-light: rgba(255, 140, 0, 0.14);
+}
+
+body.dark-mode .home2-page .h2-benefit-card:hover {
+    background: rgba(0, 184, 176, 0.09);
+}
+
+body.dark-mode .home2-page .h2-hero-visual > img,
+body.dark-mode .home2-page .h2-feature-image > img {
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .home2-page .h2-hero-card,
+body.dark-mode .home2-page .h2-feature-note {
+    background: var(--h2-surface);
+}
+
+body.dark-mode .home2-page .h2-hero-card-icon,
+body.dark-mode .home2-page .h2-feature-item > span,
+body.dark-mode .home2-page .h2-process-icon {
+    background: rgba(0, 184, 176, 0.14);
+    color: #00B8B0;
+}
+
+body.dark-mode .home2-page .h2-number {
+    color: #202D30;
+}
+
+body.dark-mode .home2-page .h2-final-cta-inner {
+    background: linear-gradient(125deg, #123D42, #087E7A);
+}
+
+/* Dark-mode storage sizes */
+
+body.dark-mode .home2-page .h2-size-card {
+    background: #1C2B30;
+    border-color: #35494D;
+    border-top-color: #00B8B0;
+}
+
+body.dark-mode .home2-page .h2-size-card:hover {
+    border-color: #00B8B0;
+    box-shadow: 0 18px 38px rgba(0, 184, 176, 0.18);
+}
+
+body.dark-mode .home2-page .h2-size-body h3,
+body.dark-mode .home2-page .h2-sizes-footer p {
+    color: #F0F7F6;
+}
+
+body.dark-mode .home2-page .h2-size-body p {
+    color: #B3C4C5;
+}
+
+body.dark-mode .home2-page .h2-size-body .h2-card-tag {
+    color: #00B8B0 !important;
+}
+
+body.dark-mode .home2-page .h2-sizes-footer {
+    background: #1C2B30;
+    border-color: #008F89;
+    border-left: 4px solid #00B8B0;
+}
+
+/* Preserve orange storage buttons in dark mode */
+
+body.dark-mode .home2-page .h2-size-body .h2-link {
+    background-color: transparent;
+    color: #E67E00;
+    border-color: #FF8C00;
+}
+
+body.dark-mode .home2-page .h2-size-body .h2-link:hover {
+    background-color: #FF8C00;
+    color: #202D30;
+}
+
+body.dark-mode .home2-page .h2-sizes-footer .h2-link {
+    background-color: #FF8C00;
+    color: #202D30;
+    border-color: #FF8C00;
+}
+
+body.dark-mode .home2-page .h2-sizes-footer .h2-link:hover {
+    background-color: #E67E00;
+    color: #202D30;
+    border-color: #E67E00;
+}
+
+/* ==================== 19. SHARED HEADER ==================== */
+
+/* Keep logo text colors unchanged in both themes */
+
+.brand-name .store,
+.footer-brand-name .store,
+body.dark-mode .brand-name .store,
+body.dark-mode .footer-brand-name .store {
+    color: #00B8B0 !important;
+}
+
+.brand-name .vault,
+.footer-brand-name .vault,
+body.dark-mode .brand-name .vault,
+body.dark-mode .footer-brand-name .vault {
+    color: #FF8C00 !important;
+}
+
+.brand-tagline,
+.footer-tagline,
+body.dark-mode .brand-tagline,
+body.dark-mode .footer-tagline {
+    color: #00B8B0 !important;
+}
+
+/* RTL toggle button */
+
+.site-header #rtlBtn,
+.site-header .rtl-btn {
+    border: 1px solid #00B8B0 !important;
+}
+
+.site-header #rtlBtn:hover,
+.site-header .rtl-btn:hover {
+    border-color: #008F89 !important;
+}
+
+body.dark-mode .site-header #rtlBtn,
+body.dark-mode .site-header .rtl-btn {
+    border-color: #00B8B0 !important;
+}
+
+body.dark-mode .site-header #rtlBtn:hover,
+body.dark-mode .site-header .rtl-btn:hover {
+    border-color: #008F89 !important;
+}
+
+/* Theme toggle: consistent teal border */
+
+.site-header #themeBtn,
+.site-header .icon-btn {
+    border: 1px solid #00B8B0 !important;
+    border-radius: 50%;
+    box-shadow: none !important;
+}
+
+.site-header #themeBtn:hover,
+.site-header .icon-btn:hover {
+    border-color: #008F89 !important;
+}
+
+body.dark-mode .site-header #themeBtn,
+body.dark-mode .site-header .icon-btn {
+    border: 1px solid #00B8B0 !important;
+    border-radius: 50%;
+    box-shadow: none !important;
+}
+
+body.dark-mode .site-header #themeBtn:hover,
+body.dark-mode .site-header .icon-btn:hover {
+    border-color: #008F89 !important;
+}
+
+/* Contact Us button: orange in both themes */
+
+.home2-page .contact-btn,
+.home2-page .contact-us-btn,
+.home2-page a[href="contact.html"] {
+    background-color: #FF8C00 !important;
+    color: #202D30 !important;
+    border: 1px solid #FF8C00 !important;
+}
+
+.home2-page .contact-btn:hover,
+.home2-page .contact-us-btn:hover,
+.home2-page a[href="contact.html"]:hover {
+    background-color: #E67E00 !important;
+    color: #202D30 !important;
+    border-color: #E67E00 !important;
+}
+
+/* ==================== 20. RTL SUPPORT ==================== */
+
+[dir="rtl"] .home2-page .h2-hero-visual {
+    padding: 0 0 15px 12px;
+}
+
+[dir="rtl"] .home2-page .h2-hero-shape {
+    right: auto;
+    left: -12px;
+}
+
+[dir="rtl"] .home2-page .h2-hero-card {
+    right: auto;
+    left: -8px;
+}
+
+[dir="rtl"] .home2-page .h2-feature-image {
+    padding: 0 18px 18px 0;
+}
+
+[dir="rtl"] .home2-page .h2-feature-image::before {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .home2-page .h2-feature-note {
+    right: auto;
+    left: -25px;
+}
+
+[dir="rtl"] .home2-page .h2-number,
+[dir="rtl"] .home2-page .h2-benefit-number {
+    right: auto;
+    left: 16px;
+}
+
+[dir="rtl"] .home2-page .h2-faq-item summary {
+    padding: 22px 0 22px 42px;
+}
+
+[dir="rtl"] .home2-page .h2-faq-item summary::after {
+    right: auto;
+    left: 3px;
+}
+
+[dir="rtl"] .home2-page .h2-idea-overlay {
+    text-align: right;
+}
+
+[dir="rtl"] .home2-page .h2-size-label {
+    left: auto;
+    right: 16px;
+}
+
+[dir="rtl"] .home2-page .h2-sizes-footer {
+    border-left: 1px solid rgba(0, 184, 176, 0.35);
+    border-right: 4px solid #00B8B0;
+}
+
+/* ==================== 21. ACCESSIBILITY ==================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .home2-page *,
+    .home2-page *::before,
+    .home2-page *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* =========================================================
+   HOME 2 — TAGLINE SIZE
+   Consistent with the About page
+========================================================= */
+
+.home2-page .h2-eyebrow,
+.home2-page .hero-eyebrow,
+.home2-page .section-tagline,
+.home2-page .section-label,
+.home2-page .eyebrow,
+.home2-page .section-subtitle,
+.home2-page .subtitle-label,
+.home2-page .overline,
+.home2-page .cta-label {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+/* SMALL MOBILE — 380px AND BELOW */
+
+@media (max-width: 380px) {
+    .home2-page .h2-eyebrow,
+    .home2-page .hero-eyebrow,
+    .home2-page .section-tagline,
+    .home2-page .section-label,
+    .home2-page .eyebrow,
+    .home2-page .section-subtitle,
+    .home2-page .subtitle-label,
+    .home2-page .overline,
+    .home2-page .cta-label {
+        font-size: 10px;
+        letter-spacing: 1.3px;
+    }
+}
+
+
+
+/* Fix mobile header overflow */
+@media (max-width: 768px) {
+    .site-header {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .site-container.header-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 12px;
+        padding-right: 12px;
+        gap: 8px;
+    }
+
+    .brand {
+        flex: 1;
+        min-width: 0;
+        gap: 6px;
+    }
+
+    .brand img {
+        width: 42px;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .brand-text {
+        min-width: 0;
+    }
+
+    .brand-name {
+        font-size: 21px;
+        white-space: nowrap;
+    }
+
+    .brand-tagline {
+        font-size: 7px;
+        letter-spacing: 1px;
+        white-space: nowrap;
+    }
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-shrink: 0;
+    }
+
+    .rtl-btn,
+    .icon-btn,
+    .mobile-menu-btn {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        padding: 0;
+        flex-shrink: 0;
+        box-sizing: border-box;
+    }
+
+    .consultation-btn {
+        display: none;
+    }
+}
+
+/* GET A QUOTE - HIDDEN ON DESKTOP */
+#mainNav .nav-quote-btn {
+    display: none !important;
+}
+
+/* GET A QUOTE - MOBILE HAMBURGER ONLY */
+@media screen and (max-width: 1100px) {
+    #mainNav.mobile-open .nav-quote-btn {
+        display: block !important;
+        width: fit-content;
+        margin: 16px auto;
+        padding: 12px 24px;
+        background-color: #F28C28;
+        color: #ffffff;
+        border: 1px solid #F28C28;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    #mainNav.mobile-open .nav-quote-btn:hover {
+        background-color: #D97706;
+        border-color: #D97706;
+        color: #ffffff;
+    }
+}
+
+
+
+
+/* =========================================
+   HOME 2 - FINAL CTA SECOND BUTTON
+   VIEW PRICING
+========================================= */
+
+.home2-page .h2-final-cta .h2-cta-buttons a.h2-btn-light {
+    background: #FFFFFF !important;
+    color: #008F89 !important;
+    -webkit-text-fill-color: #008F89 !important;
+    border: 2px solid #00B8B0 !important;
+    text-decoration: none !important;
+}
+
+/* HOVER EFFECT */
+
+.home2-page .h2-final-cta .h2-cta-buttons a.h2-btn-light:hover {
+    background: #00B8B0 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    border-color: #00B8B0 !important;
+}
+
+
+/* STOREVAULT HOME 2 — SECONDARY BUTTON HOVER */
+
+.hero-buttons a.hero-outline-btn,
+.final-cta .cta-buttons a.cta-secondary {
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.hero-buttons a.hero-outline-btn:hover,
+.final-cta .cta-buttons a.cta-secondary:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 5px 12px rgba(0, 184, 176, 0.2) !important;
+}
+
+
+/* =====================================================
+   STOREVAULT HOME 2 — SECONDARY BUTTON HOVER
+   Transparent background | No color change
+===================================================== */
+
+/* Keep the original appearance */
+.h2-hero-buttons .h2-btn-teal,
+.h2-faq-intro .h2-btn-teal,
+.h2-cta-buttons .h2-btn-light {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease !important;
+}
+
+/* Hover effect only */
+.h2-hero-buttons .h2-btn-teal:hover,
+.h2-faq-intro .h2-btn-teal:hover,
+.h2-cta-buttons .h2-btn-light:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 5px 12px rgba(0, 184, 176, 0.2) !important;
+    filter: none !important;
+}
+
+/* =====================================================
+   STOREVAULT HOME 2
+   SECONDARY BUTTONS — FINAL FIX
+   Transparent background | White CTA text
+===================================================== */
+
+/* HERO — Explore Facilities */
+html body .home2-page .h2-hero-buttons a.h2-btn-teal,
+html body .home2-page .h2-hero-buttons a.h2-btn-teal:hover,
+html body .home2-page .h2-hero-buttons a.h2-btn-teal:focus,
+html body .home2-page .h2-hero-buttons a.h2-btn-teal:active {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #008F89 !important;
+    -webkit-text-fill-color: #008F89 !important;
+    border: 2px solid #008F89 !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+/* FINAL CTA — View Pricing */
+html body .home2-page .h2-final-cta .h2-cta-buttons a.h2-btn-light,
+html body .home2-page .h2-final-cta .h2-cta-buttons a.h2-btn-light:hover,
+html body .home2-page .h2-final-cta .h2-cta-buttons a.h2-btn-light:focus,
+html body .home2-page .h2-final-cta .h2-cta-buttons a.h2-btn-light:active,
+html body.dark-mode .home2-page .h2-final-cta .h2-cta-buttons a.h2-btn-light,
+html body.dark-mode .home2-page .h2-final-cta .h2-cta-buttons a.h2-btn-light:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    border: 2px solid #FFFFFF !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+/* Hover movement only — no background or text color change */
+html body .home2-page .h2-hero-buttons a.h2-btn-teal,
+html body .home2-page .h2-final-cta .h2-cta-buttons a.h2-btn-light {
+    transition: transform 0.25s ease !important;
+}
+
+html body .home2-page .h2-hero-buttons a.h2-btn-teal:hover,
+html body .home2-page .h2-final-cta .h2-cta-buttons a.h2-btn-light:hover {
+    transform: translateY(-3px) !important;
+}
+
+/* =====================================================
+   STOREVAULT HOME 2 — ANIMATIONS
+   Uses your actual HTML classes
+===================================================== */
+
+/* 1. ANIMATION KEYFRAMES */
+@keyframes h2EnterUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes h2EnterRight {
+    from {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes h2SoftFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 2. HERO ANIMATION */
+.home2-page .h2-hero-content {
+    animation: h2EnterUp 0.8s ease-out both;
+}
+
+.home2-page .h2-hero-visual {
+    animation: h2EnterRight 0.9s ease-out both;
+}
+
+.home2-page .h2-hero-card {
+    animation: h2EnterUp 0.8s ease-out 0.25s both;
+}
+
+/* 3. SECTION HEADINGS */
+.home2-page .h2-heading,
+.home2-page .h2-process-heading {
+    animation: h2SoftFade 0.8s ease-out both;
+}
+
+/* 4. STORAGE CARDS */
+.home2-page .h2-storage-card,
+.home2-page .h2-size-card {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.home2-page .h2-storage-card:hover,
+.home2-page .h2-size-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 30px rgba(21, 58, 57, 0.12);
+}
+
+/* 5. BENEFIT AND PROCESS CARDS */
+.home2-page .h2-benefit-card,
+.home2-page .h2-process-card {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.home2-page .h2-benefit-card:hover,
+.home2-page .h2-process-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(21, 58, 57, 0.10);
+}
+
+/* 6. IMAGE ZOOM */
+.home2-page .h2-storage-image,
+.home2-page .h2-size-image,
+.home2-page .h2-hero-visual,
+.home2-page .h2-feature-image,
+.home2-page .h2-idea-card {
+    overflow: hidden;
+}
+
+.home2-page .h2-storage-image img,
+.home2-page .h2-size-image img,
+.home2-page .h2-hero-visual > img,
+.home2-page .h2-feature-image > img,
+.home2-page .h2-idea-card > img {
+    transition: transform 0.5s ease;
+}
+
+.home2-page .h2-storage-card:hover .h2-storage-image img,
+.home2-page .h2-size-card:hover .h2-size-image img,
+.home2-page .h2-hero-visual:hover > img,
+.home2-page .h2-feature-image:hover > img,
+.home2-page .h2-idea-card:hover > img {
+    transform: scale(1.04);
+}
+
+/* 7. BUTTONS — LIFT ONLY, KEEP COLORS */
+.home2-page .h2-btn,
+.home2-page .h2-link,
+.home2-page .h2-idea-overlay a {
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.home2-page .h2-btn:hover,
+.home2-page .h2-link:hover,
+.home2-page .h2-idea-overlay a:hover {
+    transform: translateY(-3px);
+}
+
+/* 8. FAQ OPEN/CLOSE FEEDBACK */
+.home2-page .h2-faq-item {
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.home2-page .h2-faq-item[open] {
+    box-shadow: 0 5px 18px rgba(21, 58, 57, 0.08);
+}
+
+/* 9. FINAL CTA */
+.home2-page .h2-final-cta-inner {
+    animation: h2SoftFade 0.9s ease-out both;
+}
+
+/* 10. ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    .home2-page *,
+    .home2-page *::before,
+    .home2-page *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}

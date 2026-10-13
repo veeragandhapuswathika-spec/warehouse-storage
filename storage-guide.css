@@ -1,0 +1,1287 @@
+/* =========================================================
+   STOREVAULT — STORAGE GUIDE
+   File: storage-guide.css
+   Theme: Teal + Orange
+   Buttons: Orange Primary + Teal Outline Secondary
+   Shared Header and Footer: style.css
+========================================================= */
+
+
+/* =========================================================
+   1. PAGE VARIABLES
+========================================================= */
+
+.storage-guide-page {
+    --guide-primary: #00B8B0;
+    --guide-primary-dark: #008F89;
+    --guide-primary-deep: #006F6B;
+    --guide-primary-light: #E8F0F2;
+
+    --guide-orange: #FF8A36;
+    --guide-orange-dark: #E47718;
+    --guide-orange-light: #F3E1CE;
+
+    --guide-background: #FFFDF8;
+    --guide-surface: #FFFFFF;
+    --guide-soft: #F1F8F7;
+
+    --guide-heading: #17383C;
+    --guide-text: #425B5D;
+    --guide-muted: #687A7D;
+    --guide-border: #D8E9E6;
+
+    --guide-shadow: 0 12px 35px rgba(23, 56, 60, 0.08);
+
+    --guide-dark-background: #102729;
+    --guide-dark-section: #163336;
+    --guide-dark-card: #1B3B3D;
+    --guide-dark-border: #315657;
+    --guide-dark-text: #F4F7F6;
+    --guide-dark-muted: #BCCAC8;
+
+    --guide-radius: 14px;
+
+    margin: 0;
+    background: var(--guide-background);
+    color: var(--guide-text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    overflow-x: clip;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.storage-guide-page,
+.storage-guide-page *,
+.storage-guide-page *::before,
+.storage-guide-page *::after {
+    box-sizing: border-box;
+}
+
+.storage-guide-page img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.storage-guide-page a {
+    text-decoration: none;
+}
+
+.storage-guide-page p {
+    margin-top: 0;
+    color: var(--guide-muted);
+    line-height: 1.85;
+}
+
+.storage-guide-page h1,
+.storage-guide-page h2,
+.storage-guide-page h3,
+.storage-guide-page h4 {
+    margin-top: 0;
+    color: var(--guide-heading);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.storage-guide-page h1 {
+    margin-bottom: 22px;
+    font-size: clamp(38px, 4.5vw, 58px);
+    letter-spacing: -1.5px;
+}
+
+.storage-guide-page h2 {
+    margin-bottom: 16px;
+    font-size: clamp(28px, 3.2vw, 40px);
+    letter-spacing: -.7px;
+}
+
+.storage-guide-page h3 {
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.storage-guide-page strong {
+    color: var(--guide-heading);
+}
+
+.storage-guide-page h1 span,
+.storage-guide-page h2 span {
+    color: var(--guide-primary-dark);
+}
+
+
+/* =========================================================
+   2. SECTION SPACING
+========================================================= */
+
+.storage-guide-page .guide-hero,
+.storage-guide-page .guide-benefits,
+.storage-guide-page .guide-categories,
+.storage-guide-page .guide-planning,
+.storage-guide-page .guide-packing,
+.storage-guide-page .guide-checklist-section,
+.storage-guide-page .guide-faq,
+.storage-guide-page .guide-final-cta {
+    padding: 76px 0;
+}
+
+.storage-guide-page .site-container {
+    width: min(1200px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+.storage-guide-page .guide-heading {
+    max-width: 760px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.storage-guide-page .guide-heading p {
+    max-width: 660px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   3. SECTION TAGLINES
+========================================================= */
+
+.storage-guide-page .guide-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+
+    margin: 0 0 18px;
+    padding: 0;
+
+    color: var(--guide-orange);
+    background: transparent;
+    border: none;
+    border-radius: 0;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.storage-guide-page .guide-label::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    min-width: 22px;
+    height: 2px;
+    flex: 0 0 22px;
+    background: var(--guide-orange);
+}
+
+.storage-guide-page .guide-label::after,
+.storage-guide-page .guide-heading h2::after,
+.storage-guide-page .guide-heading::after {
+    content: none;
+    display: none;
+}
+
+.storage-guide-page .guide-heading h2 {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   4. HERO SECTION
+========================================================= */
+
+.storage-guide-page .guide-hero {
+    padding-top: 82px;
+    padding-bottom: 82px;
+    background: var(--guide-background);
+}
+
+.storage-guide-page .guide-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 54px;
+}
+
+.storage-guide-page .guide-hero-content {
+    min-width: 0;
+}
+
+.storage-guide-page .guide-hero-content > p {
+    max-width: 540px;
+    margin-bottom: 26px;
+    font-size: 15px;
+}
+
+.storage-guide-page .guide-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 26px;
+}
+
+.storage-guide-page .guide-hero-image {
+    position: relative;
+    min-width: 0;
+    height: 410px;
+    overflow: hidden;
+    isolation: isolate;
+
+    background: var(--guide-soft);
+    border: 1px solid var(--guide-border);
+    border-radius: 24px;
+    box-shadow: var(--guide-shadow);
+}
+
+.storage-guide-page .guide-hero-image > img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .6s ease;
+}
+
+.storage-guide-page .guide-hero-image:hover > img {
+    transform: scale(1.045);
+}
+
+.storage-guide-page .guide-image-note {
+    position: absolute;
+    z-index: 2;
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+    padding: 16px 19px;
+
+    background: rgba(255, 255, 255, .97);
+    border: 1px solid var(--guide-border);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(23, 56, 60, .12);
+}
+
+.storage-guide-page .guide-image-note strong {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--guide-heading);
+    font-size: 16px;
+}
+
+.storage-guide-page .guide-image-note span {
+    display: block;
+    color: var(--guide-muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   5. BUTTONS
+   Primary: Orange
+   Secondary: Transparent Teal Outline
+========================================================= */
+
+/* Primary button */
+
+.storage-guide-page .guide-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-height: 50px;
+    padding: 13px 23px;
+
+    color: #17383C;
+    background: var(--guide-orange);
+    border: 2px solid var(--guide-orange);
+    border-radius: 9px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+
+    box-shadow: none;
+    cursor: pointer;
+
+    transition:
+        background-color .25s ease,
+        border-color .25s ease,
+        color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.storage-guide-page .guide-button:hover {
+    color: #17383C;
+    background: var(--guide-orange-dark);
+    border-color: var(--guide-orange-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(228, 119, 24, .18);
+}
+
+.storage-guide-page .guide-button:active {
+    transform: translateY(0);
+}
+
+/* Secondary outline button */
+
+.storage-guide-page .guide-button-outline,
+.storage-guide-page .guide-button-outline:visited,
+.storage-guide-page .guide-button-outline:focus,
+.storage-guide-page .guide-button-outline:active {
+    color: var(--guide-primary-deep);
+    background: transparent;
+    border: 2px solid var(--guide-primary-dark);
+    box-shadow: none;
+}
+
+.storage-guide-page .guide-button-outline:hover {
+    color: var(--guide-primary-deep);
+    background: transparent;
+    border-color: var(--guide-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 184, 176, .10);
+}
+
+/* Optional teal-filled button */
+
+.storage-guide-page .guide-button-teal {
+    color: #FFFFFF;
+    background: var(--guide-primary);
+    border-color: var(--guide-primary);
+}
+
+.storage-guide-page .guide-button-teal:hover {
+    color: #FFFFFF;
+    background: var(--guide-primary-dark);
+    border-color: var(--guide-primary-dark);
+}
+
+
+/* =========================================================
+   6. BENEFITS
+========================================================= */
+
+.storage-guide-page .guide-benefits {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    background: var(--guide-soft);
+}
+
+.storage-guide-page .guide-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 22px;
+}
+
+.storage-guide-page .guide-benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: 0;
+    padding: 24px 21px;
+
+    background: var(--guide-surface);
+    border: 1px solid var(--guide-border);
+    border-radius: 15px;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.storage-guide-page .guide-benefit:hover {
+    transform: translateY(-5px);
+    border-color: var(--guide-primary);
+    box-shadow: var(--guide-shadow);
+}
+
+.storage-guide-page .guide-benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+
+    color: var(--guide-primary-dark);
+    background: var(--guide-primary-light);
+    border: 1px solid rgba(0, 184, 176, .18);
+    border-radius: 13px;
+    font-size: 25px;
+}
+
+.storage-guide-page .guide-benefit > div:last-child {
+    min-width: 0;
+}
+
+.storage-guide-page .guide-benefit strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.storage-guide-page .guide-benefit span {
+    display: block;
+    color: var(--guide-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   7. STORAGE CATEGORY CARDS
+========================================================= */
+
+.storage-guide-page .guide-categories {
+    background: var(--guide-background);
+}
+
+.storage-guide-page .guide-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 26px;
+}
+
+.storage-guide-page .guide-category-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+
+    background: var(--guide-surface);
+    border: 1px solid var(--guide-border);
+    border-radius: 17px;
+    box-shadow: 0 5px 20px rgba(23, 56, 60, .04);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.storage-guide-page .guide-category-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--guide-primary);
+    box-shadow: var(--guide-shadow);
+}
+
+.storage-guide-page .guide-category-image {
+    height: 225px;
+    flex: 0 0 225px;
+    overflow: hidden;
+    background: var(--guide-soft);
+}
+
+.storage-guide-page .guide-category-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.storage-guide-page .guide-category-card:hover .guide-category-image img {
+    transform: scale(1.06);
+}
+
+.storage-guide-page .guide-category-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+    padding: 24px;
+}
+
+.storage-guide-page .guide-number {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--guide-primary-dark);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.storage-guide-page .guide-category-content h3 {
+    font-size: 19px;
+}
+
+.storage-guide-page .guide-category-content > p {
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.storage-guide-page .guide-tip {
+    width: 100%;
+    margin-top: auto;
+    padding: 13px 14px;
+
+    color: var(--guide-muted);
+    background: var(--guide-soft);
+    border-left: 3px solid var(--guide-orange);
+    border-radius: 0 9px 9px 0;
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.storage-guide-page .guide-tip strong {
+    color: var(--guide-primary-dark);
+}
+
+
+/* =========================================================
+   8. SPACE PLANNING
+========================================================= */
+
+.storage-guide-page .guide-planning {
+    background: var(--guide-soft);
+}
+
+.storage-guide-page .guide-planning-grid {
+    display: grid;
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: 56px;
+}
+
+.storage-guide-page .guide-planning-image {
+    min-width: 0;
+    height: 430px;
+    overflow: hidden;
+
+    background: var(--guide-surface);
+    border: 1px solid var(--guide-border);
+    border-radius: 22px;
+    box-shadow: var(--guide-shadow);
+}
+
+.storage-guide-page .guide-planning-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.storage-guide-page .guide-planning-image:hover img {
+    transform: scale(1.04);
+}
+
+.storage-guide-page .guide-planning-content {
+    min-width: 0;
+}
+
+.storage-guide-page .guide-planning-content > p {
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.storage-guide-page .guide-check-list {
+    display: grid;
+    gap: 16px;
+    margin: 25px 0 28px;
+    padding: 0;
+    list-style: none;
+}
+
+.storage-guide-page .guide-check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--guide-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.storage-guide-page .guide-check-list li > span:last-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.storage-guide-page .guide-check-list .guide-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    margin-top: 2px;
+
+    color: #FFFFFF;
+    background: var(--guide-primary-dark);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   9. PACKING CARDS
+========================================================= */
+
+.storage-guide-page .guide-packing {
+    background: var(--guide-background);
+}
+
+.storage-guide-page .guide-packing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 22px;
+}
+
+.storage-guide-page .guide-packing-card {
+    min-width: 0;
+    padding: 26px 22px;
+
+    background: var(--guide-surface);
+    border: 1px solid var(--guide-border);
+    border-radius: 16px;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.storage-guide-page .guide-packing-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--guide-primary);
+    box-shadow: var(--guide-shadow);
+}
+
+.storage-guide-page .guide-packing-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+    margin-bottom: 20px;
+
+    color: var(--guide-primary-dark);
+    background: var(--guide-primary-light);
+    border: 1px solid rgba(0, 184, 176, .2);
+    border-radius: 14px;
+    font-size: 23px;
+}
+
+.storage-guide-page .guide-packing-card h3 {
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.storage-guide-page .guide-packing-card p {
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   10. CHECKLIST
+========================================================= */
+
+.storage-guide-page .guide-checklist-section {
+    background: var(--guide-soft);
+}
+
+.storage-guide-page .guide-checklist-box {
+    width: min(950px, 100%);
+    margin: 0 auto;
+    padding: 38px;
+
+    background: var(--guide-surface);
+    border: 1px solid var(--guide-border);
+    border-radius: 22px;
+    box-shadow: var(--guide-shadow);
+}
+
+.storage-guide-page .guide-checklist-intro {
+    max-width: 700px;
+    margin-bottom: 28px;
+}
+
+.storage-guide-page .guide-checklist-intro p {
+    margin-bottom: 0;
+}
+
+.storage-guide-page .guide-checklist-items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.storage-guide-page .guide-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+    padding: 15px;
+
+    color: var(--guide-text);
+    background: var(--guide-soft);
+    border: 1px solid var(--guide-border);
+    border-radius: 11px;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.storage-guide-page .guide-check-item > span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 23px;
+    height: 23px;
+    flex: 0 0 23px;
+
+    color: #FFFFFF;
+    background: var(--guide-primary-dark);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   11. FAQ
+========================================================= */
+
+.storage-guide-page .guide-faq {
+    background: var(--guide-background);
+}
+
+.storage-guide-page .guide-faq-list {
+    display: grid;
+    gap: 14px;
+    width: min(900px, 100%);
+    margin: 0 auto;
+}
+
+.storage-guide-page .guide-faq-item {
+    overflow: hidden;
+
+    background: var(--guide-surface);
+    border: 1px solid var(--guide-border);
+    border-radius: 13px;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.storage-guide-page .guide-faq-item:hover,
+.storage-guide-page .guide-faq-item[open] {
+    border-color: var(--guide-primary);
+    box-shadow: 0 7px 22px rgba(23, 56, 60, .06);
+}
+
+.storage-guide-page .guide-faq-item summary {
+    position: relative;
+    display: block;
+    padding: 20px 56px 20px 22px;
+
+    color: var(--guide-heading);
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.6;
+
+    cursor: pointer;
+    list-style: none;
+}
+
+.storage-guide-page .guide-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.storage-guide-page .guide-faq-item summary::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 27px;
+    height: 27px;
+
+    color: var(--guide-primary-dark);
+    background: var(--guide-primary-light);
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.storage-guide-page .guide-faq-item[open] summary::after {
+    content: "−";
+    color: #FFFFFF;
+    background: var(--guide-primary-dark);
+}
+
+.storage-guide-page .guide-faq-answer {
+    padding: 0 22px 21px;
+    color: var(--guide-muted);
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+.storage-guide-page .guide-faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   12. FINAL CTA
+========================================================= */
+
+.storage-guide-page .guide-final-cta {
+    padding: 76px 0;
+    text-align: center;
+    background: var(--guide-primary-deep);
+}
+
+.storage-guide-page .guide-final-cta .site-container {
+    max-width: 900px;
+}
+
+.storage-guide-page .guide-final-cta .guide-label {
+    color: var(--guide-orange-light);
+    background: transparent;
+}
+
+.storage-guide-page .guide-final-cta .guide-label::before {
+    background: var(--guide-orange);
+}
+
+.storage-guide-page .guide-final-cta h2 {
+    max-width: 780px;
+    margin: 0 auto 18px;
+    color: #FFFFFF;
+}
+
+.storage-guide-page .guide-final-cta p {
+    max-width: 700px;
+    margin: 0 auto 27px;
+    color: #E0F7F5;
+    font-size: 15px;
+}
+
+/* Primary CTA remains orange */
+
+.storage-guide-page .guide-final-cta .guide-button:not(.guide-button-outline) {
+    color: #17383C;
+    background: var(--guide-orange);
+    border-color: var(--guide-orange);
+}
+
+.storage-guide-page .guide-final-cta .guide-button:not(.guide-button-outline):hover {
+    color: #17383C;
+    background: var(--guide-orange-dark);
+    border-color: var(--guide-orange-dark);
+}
+
+/* Secondary CTA stays transparent with white outline */
+
+.storage-guide-page .guide-final-cta .guide-button-outline,
+.storage-guide-page .guide-final-cta .guide-button-outline:visited,
+.storage-guide-page .guide-final-cta .guide-button-outline:hover,
+.storage-guide-page .guide-final-cta .guide-button-outline:focus,
+.storage-guide-page .guide-final-cta .guide-button-outline:active {
+    color: #FFFFFF;
+    background: transparent;
+    border-color: #FFFFFF;
+    box-shadow: none;
+}
+
+.storage-guide-page .guide-final-cta .guide-button-outline:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, .12);
+}
+
+
+/* =========================================================
+   13. DARK MODE
+========================================================= */
+
+body.dark-mode .storage-guide-page {
+    --guide-background: #102729;
+    --guide-surface: #1B3B3D;
+    --guide-soft: #163336;
+
+    --guide-heading: #F4F7F6;
+    --guide-text: #F4F7F6;
+    --guide-muted: #BCCAC8;
+    --guide-border: #315657;
+
+    --guide-primary-light: #25464B;
+    --guide-orange-light: #493927;
+
+    --guide-shadow: 0 18px 50px rgba(0, 0, 0, .22);
+}
+
+body.dark-mode .storage-guide-page h1 span,
+body.dark-mode .storage-guide-page h2 span {
+    color: #32DED5;
+}
+
+body.dark-mode .storage-guide-page .guide-label {
+    color: #FF8A36;
+    background: transparent;
+}
+
+body.dark-mode .storage-guide-page .guide-label::before {
+    background: #FF8A36;
+}
+
+body.dark-mode .storage-guide-page .guide-benefit-icon,
+body.dark-mode .storage-guide-page .guide-packing-icon {
+    color: #32DED5;
+    background: #25464B;
+    border-color: #315657;
+}
+
+body.dark-mode .storage-guide-page .guide-number,
+body.dark-mode .storage-guide-page .guide-tip strong {
+    color: #32DED5;
+}
+
+body.dark-mode .storage-guide-page .guide-image-note {
+    background: rgba(27, 59, 61, .97);
+    border-color: var(--guide-border);
+}
+
+body.dark-mode .storage-guide-page .guide-image-note strong {
+    color: #F4F7F6;
+}
+
+body.dark-mode .storage-guide-page .guide-image-note span {
+    color: #BCCAC8;
+}
+
+body.dark-mode .storage-guide-page .guide-tip {
+    color: #BCCAC8;
+    background: #163336;
+    border-left-color: var(--guide-orange);
+}
+
+body.dark-mode .storage-guide-page .guide-check-list li {
+    color: #BCCAC8;
+}
+
+body.dark-mode .storage-guide-page .guide-check-list .guide-check,
+body.dark-mode .storage-guide-page .guide-check-item > span {
+    color: #FFFFFF;
+    background: var(--guide-primary-dark);
+}
+
+body.dark-mode .storage-guide-page .guide-faq-item summary::after {
+    color: #32DED5;
+    background: #25464B;
+}
+
+body.dark-mode .storage-guide-page .guide-faq-item[open] summary::after {
+    color: #FFFFFF;
+    background: var(--guide-primary-dark);
+}
+
+body.dark-mode .storage-guide-page .guide-final-cta {
+    background: #006F6B;
+}
+
+body.dark-mode .storage-guide-page .guide-final-cta .guide-label {
+    color: #FF8A36;
+}
+
+body.dark-mode .storage-guide-page .guide-final-cta h2 {
+    color: #F4F7F6;
+}
+
+body.dark-mode .storage-guide-page .guide-final-cta p {
+    color: #E0F7F5;
+}
+
+/* Dark mode primary button */
+
+body.dark-mode .storage-guide-page .guide-button {
+    color: #17383C;
+    background: #FF8A36;
+    border-color: #FF8A36;
+}
+
+body.dark-mode .storage-guide-page .guide-button:hover {
+    color: #17383C;
+    background: #E47718;
+    border-color: #E47718;
+}
+
+/* Dark mode secondary button */
+
+body.dark-mode .storage-guide-page .guide-button-outline,
+body.dark-mode .storage-guide-page .guide-button-outline:visited,
+body.dark-mode .storage-guide-page .guide-button-outline:focus,
+body.dark-mode .storage-guide-page .guide-button-outline:active,
+body.dark-mode .storage-guide-page .guide-button-outline:hover {
+    color: #32DED5;
+    background: transparent;
+    border-color: #32DED5;
+}
+
+/* Final CTA secondary button stays white */
+
+body.dark-mode .storage-guide-page .guide-final-cta .guide-button-outline,
+body.dark-mode .storage-guide-page .guide-final-cta .guide-button-outline:visited,
+body.dark-mode .storage-guide-page .guide-final-cta .guide-button-outline:hover,
+body.dark-mode .storage-guide-page .guide-final-cta .guide-button-outline:focus,
+body.dark-mode .storage-guide-page .guide-final-cta .guide-button-outline:active {
+    color: #FFFFFF;
+    background: transparent;
+    border-color: #FFFFFF;
+}
+
+
+/* =========================================================
+   14. RTL SUPPORT
+========================================================= */
+
+html[dir="rtl"] .storage-guide-page {
+    direction: rtl;
+}
+
+html[dir="rtl"] .storage-guide-page h1,
+html[dir="rtl"] .storage-guide-page h2,
+html[dir="rtl"] .storage-guide-page h3 {
+    letter-spacing: 0;
+}
+
+html[dir="rtl"] .storage-guide-page .guide-benefit,
+html[dir="rtl"] .storage-guide-page .guide-check-list li,
+html[dir="rtl"] .storage-guide-page .guide-check-item {
+    text-align: right;
+}
+
+html[dir="rtl"] .storage-guide-page .guide-tip {
+    border-left: 0;
+    border-right: 3px solid var(--guide-orange);
+    border-radius: 9px 0 0 9px;
+}
+
+html[dir="rtl"] .storage-guide-page .guide-faq-item summary {
+    padding-right: 22px;
+    padding-left: 56px;
+}
+
+html[dir="rtl"] .storage-guide-page .guide-faq-item summary::after {
+    right: auto;
+    left: 20px;
+}
+
+
+/* =========================================================
+   15. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+    .storage-guide-page .guide-hero-grid,
+    .storage-guide-page .guide-planning-grid {
+        gap: 30px;
+    }
+
+    .storage-guide-page .guide-benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .storage-guide-page .guide-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .storage-guide-page .guide-packing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .storage-guide-page .guide-hero-image {
+        height: 350px;
+    }
+
+    .storage-guide-page .guide-planning-image {
+        height: 360px;
+    }
+}
+
+
+/* =========================================================
+   16. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+    .storage-guide-page .site-container {
+        width: calc(100% - 32px);
+    }
+
+    .storage-guide-page .guide-hero,
+    .storage-guide-page .guide-benefits,
+    .storage-guide-page .guide-categories,
+    .storage-guide-page .guide-planning,
+    .storage-guide-page .guide-packing,
+    .storage-guide-page .guide-checklist-section,
+    .storage-guide-page .guide-faq,
+    .storage-guide-page .guide-final-cta {
+        padding: 48px 0;
+    }
+
+    .storage-guide-page .guide-hero-grid,
+    .storage-guide-page .guide-planning-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    .storage-guide-page .guide-benefits-grid,
+    .storage-guide-page .guide-category-grid,
+    .storage-guide-page .guide-packing-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .storage-guide-page .guide-heading {
+        margin-bottom: 28px;
+    }
+
+    .storage-guide-page h1 {
+        font-size: clamp(34px, 8vw, 45px);
+        letter-spacing: -1px;
+    }
+
+    .storage-guide-page h2 {
+        font-size: clamp(27px, 6.5vw, 34px);
+    }
+
+    .storage-guide-page .guide-hero-content > p {
+        font-size: 14px;
+    }
+
+    .storage-guide-page .guide-hero-image {
+        height: 300px;
+    }
+
+    .storage-guide-page .guide-planning-image {
+        height: 280px;
+    }
+
+    .storage-guide-page .guide-category-image {
+        height: 235px;
+        flex-basis: 235px;
+    }
+
+    .storage-guide-page .guide-benefit {
+        padding: 21px;
+    }
+
+    .storage-guide-page .guide-packing-card {
+        padding: 23px;
+    }
+
+    .storage-guide-page .guide-checklist-box {
+        padding: 24px 18px;
+    }
+
+    .storage-guide-page .guide-checklist-items {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .storage-guide-page .guide-button {
+        min-height: 48px;
+        padding: 12px 17px;
+    }
+}
+
+
+/* =========================================================
+   17. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+    .storage-guide-page .site-container {
+        width: calc(100% - 26px);
+    }
+
+    .storage-guide-page .guide-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .storage-guide-page .guide-hero-buttons .guide-button {
+        width: 100%;
+    }
+
+    .storage-guide-page .guide-image-note {
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        padding: 12px;
+    }
+
+    .storage-guide-page .guide-category-content {
+        padding: 20px;
+    }
+
+    .storage-guide-page .guide-checklist-box {
+        padding: 20px 14px;
+    }
+
+    .storage-guide-page .guide-faq-item summary {
+        padding: 17px 46px 17px 16px;
+        font-size: 14px;
+    }
+
+    html[dir="rtl"] .storage-guide-page .guide-faq-item summary {
+        padding-right: 16px;
+        padding-left: 46px;
+    }
+
+    .storage-guide-page .guide-faq-item summary::after {
+        right: 12px;
+    }
+
+    html[dir="rtl"] .storage-guide-page .guide-faq-item summary::after {
+        right: auto;
+        left: 12px;
+    }
+}
+
+
+/* =========================================================
+   18. ACCESSIBILITY
+========================================================= */
+
+.storage-guide-page a:focus-visible,
+.storage-guide-page button:focus-visible,
+.storage-guide-page summary:focus-visible {
+    outline: 3px solid var(--guide-primary-dark);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .storage-guide-page,
+    .storage-guide-page *,
+    .storage-guide-page *::before,
+    .storage-guide-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}

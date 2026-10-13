@@ -1,0 +1,1871 @@
+/* =========================================================
+   STOREVAULT
+   PRICING PAGE - COMPLETE CSS
+   Teal + Orange Theme
+   Shared Header and Footer Stay in style.css
+========================================================= */
+
+
+/* =========================================================
+   1. PRICING VARIABLES
+========================================================= */
+
+:root {
+    --price-primary: #00B8B0;
+    --price-primary-dark: #008F89;
+    --price-primary-deep: #006F6B;
+
+    --price-orange: #FF8A36;
+    --price-orange-dark: #E47718;
+
+    --price-heading: #17383C;
+    --price-text: #425B5D;
+    --price-muted: #687A7D;
+
+    --price-background: #FFFDF8;
+    --price-section: #F1F8F7;
+    --price-card: #FFFFFF;
+    --price-border: #D8E9E6;
+
+    --price-dark-background: #102729;
+    --price-dark-section: #163336;
+    --price-dark-card: #1B3B3D;
+    --price-dark-border: #315657;
+    --price-dark-text: #F4F7F6;
+    --price-dark-muted: #BCCAC8;
+
+    --price-radius: 14px;
+    --price-shadow: 0 12px 35px rgba(23, 56, 60, 0.08);
+    --price-container: 1200px;
+}
+
+
+/* =========================================================
+   2. PRICING PAGE BASE
+========================================================= */
+
+body {
+    margin: 0;
+}
+
+.pricing-hero,
+.pricing-intro,
+.pricing-plans,
+.pricing-advantages,
+.pricing-comparison,
+.pricing-process,
+.pricing-faq,
+.pricing-final-cta {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.pricing-hero *,
+.pricing-intro *,
+.pricing-plans *,
+.pricing-advantages *,
+.pricing-comparison *,
+.pricing-process *,
+.pricing-faq *,
+.pricing-final-cta * {
+    box-sizing: border-box;
+}
+
+.pricing-hero,
+.pricing-intro,
+.pricing-plans,
+.pricing-advantages,
+.pricing-comparison,
+.pricing-process,
+.pricing-faq {
+    color: var(--price-text);
+}
+
+.pricing-hero h1,
+.pricing-hero h2,
+.pricing-intro h2,
+.pricing-plans h2,
+.pricing-plans h3,
+.pricing-plans h4,
+.pricing-advantages h2,
+.pricing-advantages h3,
+.pricing-comparison h2,
+.pricing-process h2,
+.pricing-process h3,
+.pricing-faq h2 {
+    color: var(--price-heading);
+}
+
+.pricing-hero p,
+.pricing-intro p,
+.pricing-plans p,
+.pricing-advantages p,
+.pricing-comparison p,
+.pricing-process p,
+.pricing-faq p {
+    line-height: 1.8;
+}
+
+.pricing-hero img,
+.pricing-plans img {
+    display: block;
+    max-width: 100%;
+}
+
+.pricing-hero a,
+.pricing-plans a,
+.pricing-advantages a,
+.pricing-faq a,
+.pricing-final-cta a {
+    text-decoration: none;
+}
+
+.pricing-hero a:focus-visible,
+.pricing-plans a:focus-visible,
+.pricing-advantages a:focus-visible,
+.pricing-faq a:focus-visible,
+.pricing-final-cta a:focus-visible {
+    outline: 3px solid var(--price-primary);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   3. PRICING HERO
+========================================================= */
+
+.pricing-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 0;
+    background: var(--price-background);
+}
+
+.pricing-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: 65px;
+}
+
+.pricing-hero-content {
+    max-width: 570px;
+}
+
+.pricing-eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--price-primary-dark);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+.pricing-hero-content h1 {
+    margin: 0 0 22px;
+    color: var(--price-heading);
+    font-size: clamp(38px, 4.5vw, 58px);
+    font-weight: 800;
+    line-height: 1.13;
+    letter-spacing: -1.5px;
+}
+
+.pricing-hero-content h1 span {
+    display: block;
+    color: var(--price-primary-dark);
+}
+
+.pricing-hero-content > p {
+    max-width: 540px;
+    margin: 0;
+    color: var(--price-muted);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.pricing-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   4. BUTTON SYSTEM
+   Matches Facilities CSS
+========================================================= */
+
+.pricing-btn,
+.pricing-plan-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 50px;
+    padding: 14px 25px;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.4;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.pricing-btn:hover,
+.pricing-plan-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Orange primary button */
+
+.pricing-btn-primary,
+.pricing-plan-btn,
+.pricing-plan-btn-featured,
+.pricing-btn-light {
+    background: var(--price-orange);
+    color: #172B32;
+    border-color: var(--price-orange);
+}
+
+.pricing-btn-primary:hover,
+.pricing-plan-btn:hover,
+.pricing-plan-btn-featured:hover,
+.pricing-btn-light:hover {
+    background: var(--price-orange-dark);
+    color: #172B32;
+    border-color: var(--price-orange-dark);
+}
+
+/* Teal outline button */
+
+.pricing-btn-outline {
+    background: transparent;
+    color: var(--price-primary-dark);
+    border-color: var(--price-primary);
+}
+
+.pricing-btn-outline:hover {
+    background: var(--price-primary-dark);
+    color: #FFFFFF;
+    border-color: var(--price-primary-dark);
+}
+
+/* Final CTA outline button */
+
+.pricing-btn-cta-outline {
+    background: transparent;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.pricing-btn-cta-outline:hover {
+    background: #FFFFFF;
+    color: #17383C;
+    border-color: #FFFFFF;
+}
+
+
+/* =========================================================
+   5. HERO IMAGE AND FLOATING CARD
+========================================================= */
+
+.pricing-hero-visual {
+    position: relative;
+    min-width: 0;
+}
+
+.pricing-hero-visual > img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--price-shadow);
+}
+
+.pricing-floating-card {
+    position: absolute;
+    right: -22px;
+    bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: min(310px, 90%);
+    padding: 20px;
+    background: var(--price-card);
+    border: 1px solid var(--price-border);
+    border-radius: 12px;
+    box-shadow: var(--price-shadow);
+}
+
+.pricing-floating-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: var(--price-primary);
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.pricing-floating-card strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--price-heading);
+    font-size: 15px;
+}
+
+.pricing-floating-card p {
+    margin: 0;
+    color: var(--price-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   6. HERO BENEFITS
+========================================================= */
+
+.pricing-hero-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+    margin-top: 25px;
+}
+
+.pricing-hero-benefits div {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: var(--price-text);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.pricing-hero-benefits span {
+    color: var(--price-primary-dark);
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   7. SECTION HEADINGS
+   OUR STORAGE OPTIONS AND OTHER SECTIONS
+========================================================= */
+
+.pricing-intro {
+    padding: 75px 0 30px;
+    background: var(--price-section);
+}
+
+.pricing-section-heading {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pricing-section-heading .pricing-eyebrow {
+    margin-bottom: 14px;
+    color: var(--price-orange-dark);
+}
+
+.pricing-section-heading h2 {
+    margin: 0 0 16px;
+    color: var(--price-heading);
+    font-size: clamp(30px, 3.4vw, 42px);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.pricing-section-heading p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: var(--price-muted);
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   8. STORAGE PLAN CARDS
+========================================================= */
+
+.pricing-plans {
+    padding: 35px 0 85px;
+    background: var(--price-section);
+}
+
+.pricing-plan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 26px;
+}
+
+.pricing-plan-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--price-card);
+    border: 1px solid var(--price-border);
+    border-radius: var(--price-radius);
+    box-shadow: 0 8px 25px rgba(23, 56, 60, 0.06);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.pricing-plan-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--price-primary);
+    box-shadow: var(--price-shadow);
+}
+
+.pricing-plan-featured {
+    border: 2px solid var(--price-primary);
+}
+
+.pricing-featured-label {
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    right: 15px;
+    padding: 8px 12px;
+    background: var(--price-orange);
+    color: #172B32;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+}
+
+.pricing-plan-image {
+    position: relative;
+    height: 225px;
+    overflow: hidden;
+    background: var(--price-border);
+}
+
+.pricing-plan-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.pricing-plan-card:hover .pricing-plan-image img {
+    transform: scale(1.04);
+}
+
+.pricing-plan-badge {
+    position: absolute;
+    bottom: 14px;
+    left: 15px;
+    padding: 8px 12px;
+    background: var(--price-primary-dark);
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.pricing-plan-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 27px 24px 25px;
+}
+
+.pricing-plan-kicker {
+    margin-bottom: 9px;
+    color: var(--price-primary-dark);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.pricing-plan-body h3 {
+    margin: 0 0 12px;
+    color: var(--price-heading);
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.pricing-plan-description {
+    min-height: 78px;
+    margin: 0 0 20px;
+    color: var(--price-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.pricing-price {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 17px;
+    background: var(--price-section);
+    border: 1px solid var(--price-border);
+    border-radius: 9px;
+}
+
+.pricing-price-label {
+    color: var(--price-muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pricing-price strong {
+    color: var(--price-primary-dark);
+    font-size: 19px;
+    font-weight: 900;
+}
+
+.pricing-price > span:last-child {
+    color: var(--price-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.pricing-plan-divider {
+    width: 100%;
+    height: 1px;
+    margin: 23px 0;
+    background: var(--price-border);
+}
+
+.pricing-plan-body h4 {
+    margin: 0 0 16px;
+    color: var(--price-heading);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.pricing-feature-list {
+    display: grid;
+    gap: 13px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pricing-feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--price-text);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.pricing-feature-list li span {
+    flex-shrink: 0;
+    color: var(--price-primary-dark);
+    font-weight: 900;
+}
+
+.pricing-plan-btn {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 14px 17px;
+    font-size: 13px;
+}
+
+.pricing-plan-btn span {
+    flex-shrink: 0;
+    font-size: 20px;
+}
+
+.pricing-disclaimer {
+    max-width: 850px;
+    margin: 28px auto 0;
+    color: var(--price-muted);
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+
+/* =========================================================
+   9. ADVANTAGES SECTION
+========================================================= */
+
+.pricing-advantages {
+    padding: 90px 0;
+    background: var(--price-background);
+}
+
+.pricing-advantages-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+    gap: 70px;
+}
+
+.pricing-advantages-content {
+    position: sticky;
+    top: 30px;
+}
+
+.pricing-advantages-content .pricing-eyebrow {
+    color: var(--price-orange-dark);
+}
+
+.pricing-advantages-content h2 {
+    margin: 0 0 20px;
+    color: var(--price-heading);
+    font-size: clamp(30px, 3vw, 40px);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.pricing-advantages-content > p {
+    margin: 0;
+    color: var(--price-muted);
+    font-size: 15px;
+}
+
+.pricing-advantages-content .pricing-btn {
+    margin-top: 26px;
+}
+
+.pricing-advantage-list {
+    display: grid;
+    gap: 16px;
+}
+
+.pricing-advantage-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 23px;
+    background: var(--price-card);
+    border: 1px solid var(--price-border);
+    border-radius: 11px;
+}
+
+.pricing-advantage-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 184, 176, 0.12);
+    color: var(--price-primary-dark);
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.pricing-advantage-item h3 {
+    margin: 0 0 8px;
+    color: var(--price-heading);
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.pricing-advantage-item p {
+    margin: 0;
+    color: var(--price-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   10. COMPARISON TABLE
+========================================================= */
+
+.pricing-comparison {
+    padding: 85px 0;
+    background: var(--price-section);
+}
+
+.pricing-table-wrap {
+    margin-top: 40px;
+    overflow-x: auto;
+    background: var(--price-card);
+    border: 1px solid var(--price-border);
+    border-radius: 12px;
+    box-shadow: var(--price-shadow);
+    -webkit-overflow-scrolling: touch;
+}
+
+.pricing-table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--price-border);
+    color: var(--price-text);
+    font-size: 13px;
+    line-height: 1.6;
+    vertical-align: middle;
+}
+
+.pricing-table thead th {
+    background: var(--price-primary-dark);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.pricing-table thead th:first-child {
+    border-radius: 0;
+}
+
+.pricing-table tbody th {
+    color: var(--price-heading);
+    font-weight: 800;
+}
+
+.pricing-table tbody tr:last-child th,
+.pricing-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.pricing-table tbody tr:hover {
+    background: var(--price-section);
+}
+
+.pricing-table td a {
+    color: var(--price-primary-dark);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.pricing-table td a:hover {
+    color: var(--price-orange-dark);
+}
+
+
+/* =========================================================
+   11. PRICING PROCESS
+========================================================= */
+
+.pricing-process {
+    padding: 85px 0;
+    background: var(--price-background);
+}
+
+.pricing-process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 42px;
+}
+
+.pricing-process-card {
+    padding: 30px 25px;
+    background: var(--price-card);
+    border: 1px solid var(--price-border);
+    border-radius: var(--price-radius);
+    box-shadow: 0 8px 25px rgba(23, 56, 60, 0.05);
+    transition: transform 0.25s ease;
+}
+
+.pricing-process-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-process-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 22px;
+    background: var(--price-orange);
+    color: #172B32;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.pricing-process-card h3 {
+    margin: 0 0 12px;
+    color: var(--price-heading);
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.pricing-process-card p {
+    margin: 0;
+    color: var(--price-muted);
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   12. FAQ
+========================================================= */
+
+.pricing-faq {
+    padding: 85px 0;
+    background: var(--price-section);
+}
+
+.pricing-faq-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+    align-items: start;
+    gap: 65px;
+}
+
+.pricing-faq-intro {
+    position: sticky;
+    top: 30px;
+}
+
+.pricing-faq-intro h2 {
+    margin: 0 0 16px;
+    color: var(--price-heading);
+    font-size: clamp(29px, 3vw, 38px);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.pricing-faq-intro p {
+    margin: 0;
+    color: var(--price-muted);
+    font-size: 15px;
+}
+
+.pricing-faq-intro .pricing-btn {
+    margin-top: 25px;
+}
+
+.pricing-faq-list {
+    display: grid;
+    gap: 13px;
+}
+
+.pricing-faq-item {
+    overflow: hidden;
+    background: var(--price-card);
+    border: 1px solid var(--price-border);
+    border-radius: 10px;
+}
+
+.pricing-faq-item summary {
+    position: relative;
+    padding: 20px 50px 20px 20px;
+    color: var(--price-heading);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.6;
+    cursor: pointer;
+    list-style: none;
+}
+
+.pricing-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.pricing-faq-item summary::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    color: var(--price-primary-dark);
+    font-size: 23px;
+    font-weight: 500;
+    transform: translateY(-50%);
+}
+
+.pricing-faq-item[open] summary {
+    border-bottom: 1px solid var(--price-border);
+}
+
+.pricing-faq-item[open] summary::after {
+    content: "−";
+    color: var(--price-orange-dark);
+}
+
+.pricing-faq-item > p {
+    margin: 0;
+    padding: 18px 20px 22px;
+    color: var(--price-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   13. FINAL CTA
+========================================================= */
+
+.pricing-final-cta {
+    padding: 80px 0;
+    overflow: hidden;
+    background: var(--price-primary-deep);
+}
+
+.pricing-final-cta-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    min-height: 300px;
+    padding: 50px 55px;
+    overflow: hidden;
+    background: var(--price-primary-dark);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+}
+
+.pricing-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.pricing-cta-content .pricing-eyebrow {
+    color: #FFD0A8;
+}
+
+.pricing-cta-content h2 {
+    margin: 0 0 18px;
+    color: #FFFFFF;
+    font-size: clamp(30px, 3.5vw, 43px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.pricing-cta-content > p {
+    max-width: 590px;
+    margin: 0;
+    color: #E0F7F5;
+    font-size: 15px;
+}
+
+.pricing-cta-content .pricing-hero-actions {
+    margin-top: 25px;
+}
+
+.pricing-cta-decoration {
+    position: relative;
+    flex-shrink: 0;
+    width: 200px;
+    height: 190px;
+}
+
+.pricing-cta-box {
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    transform: rotate(45deg);
+}
+
+.pricing-cta-box-one {
+    top: 0;
+    left: 50px;
+    background: rgba(255, 138, 54, 0.9);
+    border-color: var(--price-orange);
+}
+
+.pricing-cta-box-two {
+    top: 65px;
+    left: 5px;
+    background: rgba(0, 184, 176, 0.45);
+}
+
+.pricing-cta-box-three {
+    top: 65px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   14. DARK MODE
+   Only Pricing page content
+========================================================= */
+
+body.dark-mode .pricing-hero,
+body.dark-mode .pricing-advantages,
+body.dark-mode .pricing-process {
+    background: var(--price-dark-background);
+}
+
+body.dark-mode .pricing-intro,
+body.dark-mode .pricing-plans,
+body.dark-mode .pricing-comparison,
+body.dark-mode .pricing-faq {
+    background: var(--price-dark-section);
+}
+
+body.dark-mode .pricing-hero h1,
+body.dark-mode .pricing-section-heading h2,
+body.dark-mode .pricing-plan-body h3,
+body.dark-mode .pricing-plan-body h4,
+body.dark-mode .pricing-advantages-content h2,
+body.dark-mode .pricing-advantage-item h3,
+body.dark-mode .pricing-process-card h3,
+body.dark-mode .pricing-faq-intro h2 {
+    color: var(--price-dark-text);
+}
+
+body.dark-mode .pricing-hero-content > p,
+body.dark-mode .pricing-section-heading p,
+body.dark-mode .pricing-plan-description,
+body.dark-mode .pricing-price > span:last-child,
+body.dark-mode .pricing-advantage-item p,
+body.dark-mode .pricing-process-card p,
+body.dark-mode .pricing-faq-intro p,
+body.dark-mode .pricing-faq-item > p {
+    color: var(--price-dark-muted);
+}
+
+body.dark-mode .pricing-hero-content h1 span,
+body.dark-mode .pricing-plan-kicker,
+body.dark-mode .pricing-price strong {
+    color: #32DED5;
+}
+
+body.dark-mode .pricing-eyebrow {
+    color: #32DED5;
+}
+
+body.dark-mode .pricing-plan-card,
+body.dark-mode .pricing-advantage-item,
+body.dark-mode .pricing-process-card,
+body.dark-mode .pricing-faq-item,
+body.dark-mode .pricing-floating-card,
+body.dark-mode .pricing-table-wrap {
+    background: var(--price-dark-card);
+    border-color: var(--price-dark-border);
+}
+
+body.dark-mode .pricing-floating-card strong,
+body.dark-mode .pricing-table tbody th,
+body.dark-mode .pricing-faq-item summary {
+    color: var(--price-dark-text);
+}
+
+body.dark-mode .pricing-floating-card p {
+    color: var(--price-dark-muted);
+}
+
+body.dark-mode .pricing-price {
+    background: var(--price-dark-section);
+    border-color: var(--price-dark-border);
+}
+
+body.dark-mode .pricing-plan-divider,
+body.dark-mode .pricing-table th,
+body.dark-mode .pricing-table td,
+body.dark-mode .pricing-faq-item[open] summary {
+    border-color: var(--price-dark-border);
+}
+
+body.dark-mode .pricing-feature-list li {
+    color: var(--price-dark-text);
+}
+
+body.dark-mode .pricing-table thead th {
+    background: var(--price-primary-deep);
+    color: #FFFFFF;
+}
+
+body.dark-mode .pricing-table tbody td {
+    color: var(--price-dark-muted);
+}
+
+body.dark-mode .pricing-table tbody tr:hover {
+    background: var(--price-dark-section);
+}
+
+body.dark-mode .pricing-table td a {
+    color: #32DED5;
+}
+
+body.dark-mode .pricing-plan-btn,
+body.dark-mode .pricing-plan-btn-featured,
+body.dark-mode .pricing-btn-primary,
+body.dark-mode .pricing-btn-light {
+    background: var(--price-orange);
+    color: #172B32;
+    border-color: var(--price-orange);
+}
+
+body.dark-mode .pricing-plan-btn:hover,
+body.dark-mode .pricing-plan-btn-featured:hover,
+body.dark-mode .pricing-btn-primary:hover,
+body.dark-mode .pricing-btn-light:hover {
+    background: var(--price-orange-dark);
+    color: #172B32;
+    border-color: var(--price-orange-dark);
+}
+
+body.dark-mode .pricing-btn-outline {
+    background: transparent;
+    color: #32DED5;
+    border-color: #32DED5;
+}
+
+body.dark-mode .pricing-btn-outline:hover {
+    background: var(--price-primary-dark);
+    color: #FFFFFF;
+    border-color: var(--price-primary-dark);
+}
+
+body.dark-mode .pricing-btn-cta-outline {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+body.dark-mode .pricing-btn-cta-outline:hover {
+    background: #FFFFFF;
+    color: #17383C;
+}
+
+body.dark-mode .pricing-disclaimer {
+    color: var(--price-dark-muted);
+}
+
+
+/* =========================================================
+   15. RTL SUPPORT
+========================================================= */
+
+html[dir="rtl"] .pricing-hero-content,
+html[dir="rtl"] .pricing-advantages-content,
+html[dir="rtl"] .pricing-faq-intro {
+    text-align: right;
+}
+
+html[dir="rtl"] .pricing-hero-actions {
+    justify-content: flex-start;
+}
+
+html[dir="rtl"] .pricing-floating-card {
+    right: auto;
+    left: -22px;
+}
+
+html[dir="rtl"] .pricing-plan-badge {
+    left: auto;
+    right: 15px;
+}
+
+html[dir="rtl"] .pricing-featured-label {
+    right: auto;
+    left: 15px;
+}
+
+html[dir="rtl"] .pricing-plan-btn {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .pricing-faq-item summary {
+    padding-right: 20px;
+    padding-left: 50px;
+}
+
+html[dir="rtl"] .pricing-faq-item summary::after {
+    right: auto;
+    left: 20px;
+}
+
+html[dir="rtl"] .pricing-table {
+    text-align: right;
+}
+
+
+/* =========================================================
+   16. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+    .pricing-hero {
+        padding: 70px 0;
+    }
+
+    .pricing-hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+        gap: 35px;
+    }
+
+    .pricing-hero-visual > img {
+        height: 390px;
+    }
+
+    .pricing-plan-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pricing-plan-card:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 13px);
+        justify-self: center;
+    }
+
+    .pricing-advantages-grid,
+    .pricing-faq-grid {
+        gap: 35px;
+    }
+
+    .pricing-cta-decoration {
+        opacity: 0.7;
+    }
+}
+
+
+/* =========================================================
+   17. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+    .pricing-hero {
+        padding: 55px 0;
+    }
+
+    .pricing-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .pricing-hero-content {
+        max-width: none;
+    }
+
+    .pricing-hero-content h1 {
+        font-size: clamp(34px, 9vw, 46px);
+        letter-spacing: -0.8px;
+    }
+
+    .pricing-hero-content > p {
+        font-size: 14px;
+    }
+
+    .pricing-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .pricing-btn {
+        width: 100%;
+    }
+
+    .pricing-hero-benefits {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pricing-hero-visual > img {
+        height: 300px;
+        border-radius: 14px;
+    }
+
+    .pricing-floating-card {
+        right: 12px;
+        bottom: 12px;
+        width: min(300px, calc(100% - 24px));
+        padding: 15px;
+    }
+
+    .pricing-intro {
+        padding: 55px 0 25px;
+    }
+
+    .pricing-plans {
+        padding: 25px 0 60px;
+    }
+
+    .pricing-section-heading h2 {
+        font-size: 30px;
+    }
+
+    .pricing-section-heading p {
+        font-size: 14px;
+    }
+
+    .pricing-plan-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .pricing-plan-card:last-child {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .pricing-plan-image {
+        height: 230px;
+    }
+
+    .pricing-plan-body {
+        padding: 24px 20px;
+    }
+
+    .pricing-plan-description {
+        min-height: 0;
+    }
+
+    .pricing-advantages,
+    .pricing-comparison,
+    .pricing-process,
+    .pricing-faq {
+        padding: 60px 0;
+    }
+
+    .pricing-advantages-grid,
+    .pricing-faq-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .pricing-advantages-content,
+    .pricing-faq-intro {
+        position: static;
+    }
+
+    .pricing-advantage-item {
+        padding: 19px;
+        gap: 14px;
+    }
+
+    .pricing-advantage-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .pricing-process-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+        margin-top: 30px;
+    }
+
+    .pricing-process-card {
+        padding: 25px 22px;
+    }
+
+    .pricing-table-wrap {
+        margin-top: 28px;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        padding: 15px;
+        font-size: 12px;
+    }
+
+    .pricing-final-cta {
+        padding: 55px 0;
+    }
+
+    .pricing-final-cta-inner {
+        min-height: 0;
+        padding: 35px 24px;
+        border-radius: 14px;
+    }
+
+    .pricing-cta-content h2 {
+        font-size: 30px;
+    }
+
+    .pricing-cta-content > p {
+        font-size: 14px;
+    }
+
+    .pricing-cta-decoration {
+        display: none;
+    }
+
+    .pricing-cta-content .pricing-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    html[dir="rtl"] .pricing-floating-card {
+        right: 12px;
+        left: 12px;
+    }
+}
+
+
+/* =========================================================
+   18. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+    .pricing-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .pricing-section-heading h2 {
+        font-size: 27px;
+    }
+
+    .pricing-plan-body {
+        padding: 21px 16px;
+    }
+
+    .pricing-plan-body h3 {
+        font-size: 22px;
+    }
+
+    .pricing-btn,
+    .pricing-plan-btn {
+        min-height: 50px;
+        padding: 13px 15px;
+        font-size: 13px;
+    }
+
+    .pricing-advantage-item {
+        flex-direction: column;
+    }
+
+    .pricing-faq-item summary {
+        padding: 17px 43px 17px 16px;
+        font-size: 13px;
+    }
+
+    .pricing-faq-item > p {
+        padding: 16px;
+    }
+}
+
+
+/* =========================================================
+   19. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .pricing-hero *,
+    .pricing-plans *,
+    .pricing-advantages *,
+    .pricing-process *,
+    .pricing-faq * {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* PRICING PAGE TAGLINE SIZE AND STYLE */
+
+.pricing-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #FF8A36;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+.pricing-eyebrow::before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 25px;
+    width: 25px;
+    height: 2px;
+    background-color: #FF8A36;
+}
+
+/* Centered section taglines */
+
+.pricing-section-heading .pricing-eyebrow {
+    justify-content: center;
+}
+
+/* Keep taglines left-aligned in these sections */
+
+.pricing-hero-content .pricing-eyebrow,
+.pricing-advantages-content .pricing-eyebrow,
+.pricing-faq-intro .pricing-eyebrow,
+.pricing-cta-content .pricing-eyebrow {
+    justify-content: flex-start;
+}
+
+/* Dark mode */
+
+body.dark-mode .pricing-eyebrow {
+    color: #FF8A36;
+}
+
+body.dark-mode .pricing-eyebrow::before {
+    background-color: #FF8A36;
+}
+
+/* RTL support */
+
+html[dir="rtl"] .pricing-eyebrow {
+    flex-direction: row-reverse;
+}
+
+
+/* =========================================================
+   PRICING PAGE — ORANGE TAGLINES WITH HORIZONTAL LINE
+========================================================= */
+
+.pricing-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #FF8A36 !important;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+/* Horizontal line before each tagline */
+
+.pricing-eyebrow::before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 25px;
+    width: 25px;
+    height: 2px;
+    background: #FF8A36;
+}
+
+/* Centered section headings */
+
+.pricing-section-heading .pricing-eyebrow {
+    justify-content: center;
+}
+
+/* Left-aligned taglines */
+
+.pricing-hero-content .pricing-eyebrow,
+.pricing-advantages-content .pricing-eyebrow,
+.pricing-faq-intro .pricing-eyebrow,
+.pricing-cta-content .pricing-eyebrow {
+    justify-content: flex-start;
+}
+
+/* Keep tagline orange in dark mode */
+
+body.dark-mode .pricing-eyebrow {
+    color: #FF8A36 !important;
+}
+
+body.dark-mode .pricing-eyebrow::before {
+    background: #FF8A36;
+}
+
+/* RTL support */
+
+html[dir="rtl"] .pricing-eyebrow {
+    flex-direction: row-reverse;
+}
+
+/* =========================================
+   PRICING PAGE - CTA SECOND BUTTON
+   EXPLORE FACILITIES
+========================================= */
+
+.pricing-final-cta .pricing-hero-actions a.pricing-btn-cta-outline {
+    background: #FFFFFF !important;
+    color: #008F89 !important;
+    -webkit-text-fill-color: #008F89 !important;
+    border: 2px solid #00B8B0 !important;
+    text-decoration: none !important;
+}
+
+/* HOVER EFFECT */
+
+.pricing-final-cta .pricing-hero-actions a.pricing-btn-cta-outline:hover {
+    background: #00B8B0 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    border-color: #00B8B0 !important;
+}
+
+/* =====================================================
+   STOREVAULT — PRICING PAGE ANIMATIONS
+   Teal + Orange | Smooth | Responsive
+===================================================== */
+
+/* HERO */
+.pricing-hero-content {
+    animation: pricingFadeUp 0.8s ease both;
+}
+
+.pricing-hero-visual {
+    animation: pricingFadeInRight 0.9s ease both;
+}
+
+.pricing-floating-card {
+    animation: pricingFloat 4s ease-in-out infinite;
+}
+
+/* SECTION HEADINGS */
+.pricing-section-heading {
+    animation: pricingFadeUp 0.7s ease both;
+}
+
+/* PRICING PLAN CARDS */
+.pricing-plan-card {
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.pricing-plan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 35px rgba(0, 111, 107, 0.14);
+}
+
+.pricing-plan-image img {
+    transition: transform 0.5s ease;
+}
+
+.pricing-plan-card:hover .pricing-plan-image img {
+    transform: scale(1.05);
+}
+
+/* ADVANTAGES */
+.pricing-advantage-item {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.pricing-advantage-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 111, 107, 0.10);
+}
+
+/* PROCESS CARDS */
+.pricing-process-card {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.pricing-process-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 111, 107, 0.12);
+}
+
+/* FAQ ITEMS */
+.pricing-faq-item {
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.pricing-faq-item:hover {
+    border-color: #00B8B0;
+    box-shadow: 0 6px 18px rgba(0, 111, 107, 0.08);
+}
+
+/* ALL PRICING BUTTONS */
+.pricing-hero-actions .pricing-btn,
+.pricing-plan-btn,
+.pricing-advantages-content > .pricing-btn,
+.pricing-faq-intro .pricing-btn,
+.pricing-final-cta .pricing-btn,
+.pricing-table td a {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.pricing-hero-actions .pricing-btn:hover,
+.pricing-plan-btn:hover,
+.pricing-advantages-content > .pricing-btn:hover,
+.pricing-faq-intro .pricing-btn:hover,
+.pricing-final-cta .pricing-btn:hover,
+.pricing-table td a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 111, 107, 0.16);
+}
+
+/* FINAL CTA */
+.pricing-final-cta-inner {
+    animation: pricingFadeUp 0.8s ease both;
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes pricingFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pricingFadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pricingFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    .pricing-hero-content,
+    .pricing-hero-visual,
+    .pricing-floating-card,
+    .pricing-section-heading,
+    .pricing-final-cta-inner {
+        animation: none !important;
+    }
+
+    .pricing-plan-card,
+    .pricing-plan-image img,
+    .pricing-advantage-item,
+    .pricing-process-card,
+    .pricing-faq-item,
+    .pricing-btn,
+    .pricing-plan-btn,
+    .pricing-table td a {
+        transition: none !important;
+    }
+}
+
+
+/* =========================================
+   PRICING CTA — SECOND BUTTON
+   White background, teal text
+   No teal hover background
+========================================= */
+
+.pricing-final-cta .pricing-hero-actions a.pricing-btn-cta-outline,
+.pricing-final-cta .pricing-hero-actions a.pricing-btn-cta-outline:hover,
+.pricing-final-cta .pricing-hero-actions a.pricing-btn-cta-outline:focus,
+.pricing-final-cta .pricing-hero-actions a.pricing-btn-cta-outline:active {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    color: #008F89 !important;
+    -webkit-text-fill-color: #008F89 !important;
+    border: 2px solid #00B8B0 !important;
+    box-shadow: none !important;
+}
+
+/* Animation only */
+.pricing-final-cta .pricing-hero-actions a.pricing-btn-cta-outline {
+    transition: transform 0.3s ease !important;
+}
+
+.pricing-final-cta .pricing-hero-actions a.pricing-btn-cta-outline:hover {
+    transform: translateY(-3px);
+}
+
+
+/* PRICING HERO — SECOND BUTTON */
+.pricing-hero .pricing-btn-cta-outline {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #008F89 !important;
+    -webkit-text-fill-color: #008F89 !important;
+    border: 2px solid #00B8B0 !important;
+}
+
+/* HERO BUTTON HOVER */
+.pricing-hero .pricing-btn-cta-outline:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #008F89 !important;
+    -webkit-text-fill-color: #008F89 !important;
+}
+
+/* =========================================
+   PRICING HERO — SECOND BUTTON FIX
+========================================= */
+
+.pricing-hero .pricing-hero-actions a.pricing-btn-cta-outline {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #008F89 !important;
+    -webkit-text-fill-color: #008F89 !important;
+    border: 2px solid #00B8B0 !important;
+    box-shadow: none !important;
+}
+
+.pricing-hero .pricing-hero-actions a.pricing-btn-cta-outline:hover,
+.pricing-hero .pricing-hero-actions a.pricing-btn-cta-outline:focus,
+.pricing-hero .pricing-hero-actions a.pricing-btn-cta-outline:active {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #008F89 !important;
+    -webkit-text-fill-color: #008F89 !important;
+    border-color: #00B8B0 !important;
+    box-shadow: none !important;
+}
+
+
+/* HERO SECONDARY BUTTON — KEEP TEAL ON HOVER */
+
+.pricing-hero-actions .pricing-btn-outline,
+.pricing-hero-actions .pricing-btn-outline:hover,
+.pricing-hero-actions .pricing-btn-outline:focus,
+.pricing-hero-actions .pricing-btn-outline:active,
+.pricing-hero-actions .pricing-btn-outline:visited {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #008F89 !important;
+    -webkit-text-fill-color: #008F89 !important;
+    border: 2px solid #00B8B0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
+}
+
+
+/* SUBTLE HOVER — REQUEST A QUOTE BUTTON */
+
+.pricing-hero-actions .pricing-btn-outline {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pricing-hero-actions .pricing-btn-outline:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 16px rgba(0, 184, 176, 0.18) !important;
+}
